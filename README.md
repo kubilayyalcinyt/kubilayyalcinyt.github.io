@@ -1,1 +1,2 @@
-# gnuchanos.github.io
+# archkubi.github.io
+this is learning blog

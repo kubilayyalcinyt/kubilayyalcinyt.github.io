@@ -1,0 +1,235 @@
+<html>
+
+    <center>
+
+        <style>
+            table{
+                background-color: rgba(54, 5, 87, 0.562); 
+                color: white; 
+                border-color: rgb(59, 7, 102);
+                border-radius: 20px;
+                border: 10px;
+                font-size: 11px;
+            }
+        </style>
+    <center><img src="https://i.ibb.co/94SBC7h/c-python.png" width="450" height="300"  alt=""></center> <br>
+
+    
+    <p style="color: rgb(255, 0, 140);">Print Example</p>
+    <table>
+        <td>
+    <pre>
+    
+    #include stdio.h>
+    
+    
+    int main(){
+            
+        printf("Hello f.... world")   
+        return 0;
+    }
+            
+    </pre>
+        </td>
+    
+        <td>
+    <pre>
+    
+    
+    |    print("Hello f.. world")   
+    </pre>
+        </td>
+    </table>
+    
+    <br>
+    <hr>
+    <br>
+    
+    
+    <p style="color: rgb(255, 0, 140);">String Input Example</p>
+    <table>
+        <td>
+    <pre>
+    
+    #include stdio.h>
+
+        int main(){
+            char string[20] = "Welcome to GnuchanOS";
+            char nameInput[20];
+            
+            printf("Enter Your User Name:> ");
+            scanf("%s", nameInput);
+            
+            printf("%s %s Good Day", string, nameInput);
+               
+            return 0;
+        }
+            
+            
+    </pre>
+        </td>
+    
+        <td>
+    <pre>
+    
+    
+|   string = "Welcome to GnuchanOS"
+|   nameInput=""
+|   nameInput = input("Enter Your User NAme:> ")
+|        
+|   print(f"{string} {nameInput} Good Day")
+
+
+    </pre>
+        </td>
+    </table>
+    
+    <br>
+    <hr>
+    <br>
+
+    <p style="color: rgb(255, 0, 140);">int --> float | float --> int Convert type</p>
+    <table>
+        <td>
+    <pre>
+    
+    #include stdio.h>
+
+    int main(){
+        int numberInt = 10;
+        float numberFloat = 10.50;
+        double numberDouble = 10.500;
+        char string[2] = "10"; // Nope
+        printf("%f %d %d", (float)numberInt, (int)numberFloat, (int)numberFloat);
+        return 0;
+    }
+            
+            
+            
+    </pre>
+        </td>
+    
+        <td>
+    <pre>
+|   numberInt = 10
+|   numberFloat = 10.500
+|   string = "100"
+|       
+|   print(float(numberInt), int(numberFloat), int(string))
+
+    </pre>
+        </td>
+    </table>
+    
+    <br>
+    <hr>
+    <br>
+
+    <p style="color: rgb(255, 0, 140);"> simple math C-Chan vs PythonChan </p>
+    <table>
+            
+            <td>
+                <code>
+                    <pre>
+    
+    
+    #include stdio.h>
+        
+    int main(){
+                            
+    int number1,number2;
+    int math;
+                            
+    printf("Enter Number1 :> ");
+    scanf("%d", &number1);
+                            
+    printf("Enter Number2 :> ");
+    scanf("%d", &number2);
+                            
+    printf("math | 1:+ | 2:- | 3:/ | 4:* | :> ");
+    scanf("%d", &math);
+                            
+    while(1){
+        if (math == 1){
+            printf("number1:%d + Number2:%d = %d", number1, number2, number1 + number2);    
+            break;
+            }
+                            
+        else if (math == 2){
+            printf("number1:%d - Number2:%d = %d", number1, number2, number1 - number2);
+            break;
+            }
+                                
+            else if (math == 3){
+            printf("number1:%d / Number2:%d = %d", number1, number2, number1 / number2);
+            break;
+            }
+                            
+        else if (math == 4){
+            printf("number1:%d * Number2:%d = %d", number1, number2, number1 * number2);
+            break;
+            }
+        }
+                               
+                               
+    return 0;
+    }
+                            
+                               
+                               
+                    </pre>
+                </code>
+            </td>
+    
+            <td>
+                <code>
+                    <pre>
+    
+    
+|    import numbers
+|   
+|    
+|    number1 = 0
+|    number2 = 0
+|    math = ""
+|                    
+|    number1 = int(input("Enter Number1 :> "))
+|    number2 = int(input("Enter Number2 :>  "))
+|    math = int(input("math | 1:+ | 2:- | 3:/ | 4:* | :> "))
+|                    
+|    while True:
+|                    
+|        if math == 1:
+|            print(f"Number1{number1} + Number2{number2} = ",number1 + number2) 
+|            break  
+|                    
+|        elif math == 2:
+|            print(f"Number1{number1} - Number2{number2} = ",number1 - number2) 
+|            break 
+|                    
+|       elif math == 3:
+|            print(f"Number1{number1} / Number2{number2} = ",number1 / number2) 
+|            break 
+|                    
+|        elif math == 4:
+|            print(f"Number1{number1} * Number2{number2} = ",number1 * number2) 
+|            break 
+                    </pre>
+                </code>
+            </td>
+    </table>
+    
+    <br>
+    <hr>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </center>
+</html>

@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: url("./superresim.jpg");
+    background-size: cover;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 12px * 2);
+    overflow: hidden;
+    color: #b78be4;
+}
+
+.topbar, .bottombar {
+    background: #5a189a;
+    height: 32px;
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden; /* dışa taşan kısımların görünmemesi için ekledim */
+    justify-content: space-between; /* yukarı ve aşağıdaki barlardaki bölümlerin arası boşluklu olsun */
+}
+
+.barGroup {
+    min-width: 26%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* grup içindeki elemanları ortaladım (dikey yönde) */
+}
+
+.barGroup:last-child {
+    justify-content: flex-end; /* barlardaki sonuncu bar grupların barın sağına yapışık olmasını sağladım */
+}
+
+.divider, .groupContent, .middleGroup {
+    display: flex;
+    align-items: center; /* yine küçük bir dikey hiza, bu satırı kaldırıp ne işe yaradığını anlayabilirsin :D */
+    height: 100%;
+    padding: 0px 8px;
+}
+
+.middleGroup {
+    justify-content: center; /* barlarda ortadaki grupların içeriğinin ortada durması için */
+}
+
+.divider, .middleGroup {
+    background: #280946;
+}
+
+.groupContent {
+    background: #3f116d;
+}
