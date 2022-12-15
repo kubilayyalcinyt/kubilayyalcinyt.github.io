@@ -1,0 +1,111 @@
+<style>
+    #notice{
+        color: azure;
+        font-size: 25px;
+    }
+    p{
+        color: aliceblue;
+        font-size: 35px;
+    }
+    </style>
+    
+    <p id="notice">
+
+
+        <div>
+            <div>
+            <div>
+            <div>
+            <div>
+            <div>
+            <div>
+            <div>
+            <div>
+            <div>
+            <div>
+            <div><span># fonksiyonlar ------------------------------------------------------------------------------------------------------------------</span></div>
+            <div><span>print</span><span>() </span><span># tekrar eden işlemleri tek seferde &ccedil;ağırmak i&ccedil;in</span></div>
+            <br />
+            <div><span>def</span><span> </span><span>myKingdomCome</span><span>():</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"this is my kingdome come"</span><span>)</span></div>
+            <div><span>myKingdomCome() </span><span># bu şekilde &ccedil;ağırmaz isen &ccedil;alışmaz</span></div>
+            <br />
+            <div><span>def</span><span> </span><span>userInfo</span><span>(</span><span>userName</span><span>,</span><span>fGame</span><span>): </span><span># parantez i&ccedil;ine değişken giriyoruz ve bunu print i&ccedil;in kullanıcaz</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"-"</span><span>*</span><span>50</span><span>)</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"Kullanıcı adı: "</span><span> </span><span>+</span><span> userName, </span><span>" | "</span><span> </span><span>+</span><span> </span><span>"Favori Oyunu: "</span><span> </span><span>+</span><span> fGame)</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"-"</span><span>*</span><span>50</span><span>)</span></div>
+            <br />
+            <div><span>userName </span><span>=</span><span> </span><span>input</span><span>(</span><span>"Kullanıcı Adını Gir: "</span><span>)</span></div>
+            <div><span>fGame </span><span>=</span><span> </span><span>input</span><span>(</span><span>"Favori Oyununu Gir: "</span><span>)</span></div>
+            <br />
+            <div><span>userInfo(userName, fGame) </span><span># kullanıcıdan değişenleri aldıkdan sonra &ccedil;ıktı alabiliyoruz </span></div>
+            <br />
+            <div><span>def</span><span> </span><span>math</span><span>(</span><span>n1</span><span>, </span><span>n2</span><span>): </span><span># 2 değer alıp</span></div>
+            <div><span> n3 </span><span>=</span><span> n1 </span><span>+</span><span> n2 </span><span># n3 ile toplayı</span></div>
+            <div><span> </span><span>return</span><span> n3 </span><span># d&ouml;nd&uuml;rd&uuml;ğ&uuml;m&uuml;z değeri</span></div>
+            <div><span>print</span><span>(math(</span><span>30</span><span>, </span><span>10</span><span>)) </span><span># b&ouml;ylece &ccedil;ıktı almış oluyoruz</span></div>
+            <br />
+            <div><span>globalVar </span><span>=</span><span> </span><span>10</span><span> </span><span># global değişken</span></div>
+            <div><span>def</span><span> </span><span>func</span><span>():</span></div>
+            <div><span> </span><span>global</span><span> globalVar </span><span># bu şekilde eklemediğiniz s&uuml;rece local olan değişkeni kullanıcak</span></div>
+            <div><span> globalVar </span><span>=</span><span> </span><span>5</span><span> </span><span>#local değişken</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"local Değişken"</span><span> , globalVar)</span></div>
+            <br />
+            <div><span>func()</span></div>
+            <div><span>print</span><span>(</span><span>"Global Değişken "</span><span>, globalVar) </span><span>#global 5 oldu &ccedil;&uuml;nk&uuml; fonksiyon i&ccedil;inde değiştirdik eğer global eklemeseydik değişmezdi</span></div>
+            <br />
+            <div><span># fonksiyon &ouml;rnekleri -------------------------------------------------------------------------------------------------------</span></div>
+            <br />
+            <div><span>import</span><span> datetime</span></div>
+            <br />
+            <div><span>while</span><span> </span><span>True</span><span>:</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"yaşını mı bulmak istiyorsun yoksa doğum yılını mı?"</span><span>)</span></div>
+            <div><span> dm </span><span>=</span><span> </span><span>int</span><span>(</span><span>input</span><span>(</span><span>"1) yaşını | 2) yoğum yılını: "</span><span>))</span></div>
+            <br />
+            <div><span> </span><span>if</span><span> dm </span><span>==</span><span> </span><span>1</span><span>:</span></div>
+            <div><span> </span><span>def</span><span> </span><span>howOldAreYou</span><span>(</span><span>bornYear</span><span>):</span></div>
+            <div><span> today </span><span>=</span><span> datetime.date.today()</span></div>
+            <div><span> year </span><span>=</span><span> today.year</span></div>
+            <div><span> </span><span>if</span><span> bornYear </span><span>&lt;</span><span> </span><span>0</span><span>:</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"tabi bende ilk &ccedil;ağda doğdum mesela yani"</span><span>)</span></div>
+            <div><span> </span><span>elif</span><span> year </span><span>&lt;=</span><span> bornYear:</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"vaybe burada bir zaman yolcusu var"</span><span>)</span></div>
+            <div><span> </span><span>else</span><span>:</span></div>
+            <div><span> age </span><span>=</span><span> year </span><span>-</span><span> bornYear</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"şuanda yaşın: "</span><span> </span><span>+</span><span> </span><span>str</span><span>(age))</span></div>
+            <br />
+            <div><span> bornYear </span><span>=</span><span> </span><span>int</span><span>(</span><span>input</span><span>(</span><span>"Ka&ccedil; Yılında Doğdun: "</span><span>))</span></div>
+            <div><span> howOldAreYou(bornYear)</span></div>
+            <div><span> </span><span>break</span></div>
+            <br />
+            <div><span> </span><span>elif</span><span> dm </span><span>==</span><span> </span><span>2</span><span>:</span></div>
+            <div><span> </span><span>def</span><span> </span><span>yearOfBirth</span><span>(</span><span>age</span><span>):</span></div>
+            <div><span> today </span><span>=</span><span> datetime.date.today()</span></div>
+            <div><span> year </span><span>=</span><span> today.year</span></div>
+            <div><span> </span><span>if</span><span> age </span><span>&lt;</span><span> </span><span>0</span><span>:</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"anne karnından yazıyorsun sanırım yada neyse"</span><span>)</span></div>
+            <div><span> </span><span>else</span><span>:</span></div>
+            <div><span> bornYear </span><span>=</span><span> year </span><span>-</span><span> age</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"şu yılda doğdun: "</span><span> </span><span>+</span><span> </span><span>str</span><span>(bornYear))</span></div>
+            <br />
+            <div><span> age </span><span>=</span><span> </span><span>int</span><span>(</span><span>input</span><span>(</span><span>"ka&ccedil; yaşındasın: "</span><span>))</span></div>
+            <div><span> yearOfBirth(age)</span></div>
+            <div><span> </span><span>break</span></div>
+            <div><span># -------------------------------------------------------------------------------------------------------------------------------</span></div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+
+
+
+        
+    </p>

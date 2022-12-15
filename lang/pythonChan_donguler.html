@@ -1,0 +1,116 @@
+<style>
+    #notice{
+        color: azure;
+        font-size: 25px;
+    }
+    p{
+        color: aliceblue;
+        font-size: 35px;
+    }
+    </style>
+    
+    <p id="notice">
+
+
+        <div>
+            <div>
+            <div>
+            <div>
+            <div>
+            <div>
+            <div>
+            <div>
+            <div>
+            <div><span># D&ouml;ng&uuml;ler ----------------------------------------------------------------------------------------------------------------------</span></div>
+            <br />
+            <div><span>number </span><span>=</span><span> </span><span>1</span></div>
+            <br /><br />
+            <div><span># while d&ouml;ng&uuml;s&uuml;</span></div>
+            <br />
+            <div><span>while</span><span> number </span><span>&lt;</span><span> </span><span>10</span><span>: </span><span># basit bir d&ouml;ng&uuml; number 10 olduğunda biticek</span></div>
+            <div><span> number </span><span>+=</span><span> </span><span>1</span></div>
+            <div><span> </span><span>print</span><span>(number)</span></div>
+            <br />
+            <div><span># aşşağıdaki biraz farklı bir loop</span></div>
+            <br />
+            <div><span>saniye </span><span>=</span><span> </span><span>0</span></div>
+            <div><span>while</span><span> </span><span>True</span><span>: </span><span># while bir looptur daha detaylı &ouml;rnek olucak while true ise break komutu gelene kadar a&ccedil;ık kalıcak</span></div>
+            <div><span> </span><span>if</span><span> saniye </span><span>&lt;=</span><span> </span><span>60</span><span>: </span><span># 60 saniyeden b&uuml;y&uuml;k olduğu i&ccedil;in</span></div>
+            <div><span> saniye </span><span>+=</span><span> </span><span>0.05</span><span> </span><span># eşit olanadar saniye artıcak</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>int</span><span>(saniye))</span></div>
+            <div><span> </span><span>else</span><span>:</span></div>
+            <div><span> </span><span>break</span><span> </span><span># ve saniye 60 olduğunda &lt;= deki = tamamlanmış olucak ve loop durucak</span></div>
+            <br />
+            <div><span># bu baya detaylı bir loop ve true false &ouml;rneği incelemenizi tavsiye ederim unutmayın ki şuanda bende &ouml;ğreniyorum</span></div>
+            <div><span>import</span><span> random </span><span># rasgele kalime ve sayı yapmak i&ccedil;in python k&uuml;t&uuml;phanesi</span></div>
+            <br />
+            <div><span>try</span><span>: </span><span># python da bazen kullanıcı istediğimi şey dışında veri girmeye &ccedil;alışabiliyor bu y&uuml;zden try ve except var</span></div>
+            <div><span> lowNumber </span><span>=</span><span> </span><span>int</span><span>(</span><span>input</span><span>(</span><span>"En d&uuml;ş&uuml;k sayı gir: "</span><span>)) </span><span># d&uuml;ş&uuml;k sayı i&ccedil;in input</span></div>
+            <div><span> highNumber </span><span>=</span><span> </span><span>int</span><span>(</span><span>input</span><span>(</span><span>"En Y&uuml;ksek Sayı gir: "</span><span>)) </span><span># y&uuml;ksek sayı i&ccedil;in input</span></div>
+            <div><span> </span><span>if</span><span> lowNumber </span><span>==</span><span> highNumber: </span><span># eğer d&uuml;ş&uuml;k sayı ve y&uuml;ksek sayı eşit ise hata veriyor malesef</span></div>
+            <div><span> highNumber </span><span>+=</span><span> </span><span>1</span><span> </span><span># bu y&uuml;zden +1 y&uuml;ksek sayı i&ccedil;in </span></div>
+            <div><span>except</span><span> </span><span>ValueError</span><span>: </span><span># eğer sayı yerine harf girerse hata mesajı veriyoruz</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"sayı gir --&gt; 1234 gibi falan"</span><span>)</span></div>
+            <div><span>else</span><span>: </span><span># eğer sorun yok ise işlem başlıyor</span></div>
+            <div><span> number </span><span>=</span><span> random.randrange(lowNumber, highNumber) </span><span># y&uuml;ksek sayıyı ve d&uuml;ş&uuml;k sayı arasında bir sayıyı number i&ccedil;in atıyoruz</span></div>
+            <div><span> </span><span># .randint(lowNumber, highNumber) burada y&uuml;ksek ve duşuk sayı dahil</span></div>
+            <div><span> </span><span>while</span><span> </span><span>True</span><span>:</span></div>
+            <div><span> guess </span><span>=</span><span> </span><span>int</span><span>(</span><span>input</span><span>(</span><span>"Tahmin Gir: "</span><span>)) </span><span># ve kullanıcı tahmit ediyor tekrar tekrar</span></div>
+            <div><span> </span><span>if</span><span> guess </span><span>&gt;</span><span> number: </span><span>#y&uuml;ksek ise tahmin</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"fazla attın ufak at"</span><span>)</span></div>
+            <div><span> </span><span>elif</span><span> guess </span><span>&lt;</span><span> number: </span><span># d&uuml;ş&uuml;k ise tahmin</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"&ccedil;ok d&uuml;ş&uuml;k s&ouml;yledin"</span><span>)</span></div>
+            <div><span> </span><span>else</span><span>: </span><span># eğer doğru tahmin ise</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"evet doğru bildin kazanan numara: "</span><span> </span><span>+</span><span> </span><span>str</span><span>(number))</span></div>
+            <div><span> </span><span>break</span><span> </span><span># loop bitiyor</span></div>
+            <div><span> </span></div>
+            <div><span> </span></div>
+            <div><span># -------------------------------------------------------------------------------------------------------------------------------</span></div>
+            <br /><br />
+            <div><span># for d&ouml;ng&uuml;s&uuml; -------------------------------------------------------------------------------------------------------------------</span></div>
+            <div><span>gameList </span><span>=</span><span> [</span><span>"half life 3"</span><span>, </span><span>"portal 3"</span><span>, </span><span>"left 4 dead 3"</span><span>, </span><span>"dota 3"</span><span>]</span></div>
+            <div><span>for</span><span> uwu </span><span>in</span><span> gameList: </span><span># her d&ouml;ng&uuml;de gamelist den 1 değer uwu ya atanıp print ile &ccedil;ıktı alınıyor liste bitene kadar</span></div>
+            <div><span> </span><span>print</span><span>(uwu) </span><span># uwu</span></div>
+            <br />
+            <div><span>userName </span><span>=</span><span> </span><span>input</span><span>(</span><span>"Kullanıcı adını Gir: "</span><span>)</span></div>
+            <div><span>for</span><span> lol </span><span>in</span><span> userName: </span><span># kullanıcıdan aldığımız değerin harflerini tek tek yazdırmak</span></div>
+            <div><span> </span><span>print</span><span>(lol)</span></div>
+            <br />
+            <div><span>turkishCharachter </span><span>=</span><span> </span><span>"ş&ccedil;ğ&ouml;İ&uuml;ı"</span></div>
+            <div><span>userName </span><span>=</span><span> </span><span>input</span><span>(</span><span>"bir şeyler s&ouml;yle: "</span><span>)</span></div>
+            <br />
+            <div><span>for</span><span> charachter </span><span>in</span><span> userName: </span><span># b&uuml;t&uuml;n harfleri kontrol edip</span></div>
+            <div><span> </span><span>if</span><span> charachter </span><span>in</span><span> turkishCharachter: </span><span># t&uuml;rk&ccedil;e karakter varmı diye bakıcak</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"| t&uuml;rk&ccedil;e karakter kullanma |"</span><span>)</span></div>
+            <div><span> </span><span>quit</span><span>() </span><span># var ise &ccedil;ıkış yapıcak</span></div>
+            <div><span>print</span><span>(</span><span>"Hoş geldin: "</span><span> </span><span>+</span><span> userName) </span><span># yok ise tamamlanıcak</span></div>
+            <br />
+            <div><span>for</span><span> lol </span><span>in</span><span> </span><span>range</span><span>(</span><span>2</span><span>,</span><span>102</span><span>,</span><span>2</span><span>): </span><span># başlama yeri, bitiş yeri, atlama sayısı</span></div>
+            <div><span> </span><span>print</span><span>(lol) </span><span># b&ouml;ylece 2 den başlayıp 102 kadar gidicek tabi 100 son yoksa 99 da kalır ve 2li atlama yapıcak</span></div>
+            <br /><br />
+            <div><span># while ile range d&ouml;ng&uuml;s&uuml;n&uuml; aynı anda kullanmak</span></div>
+            <div><span>while</span><span> </span><span>True</span><span>:</span></div>
+            <div><span> userName </span><span>=</span><span> </span><span>input</span><span>(</span><span>"Kullanıcı Adı: "</span><span>)</span></div>
+            <div><span> </span><span>if</span><span> </span><span>not</span><span> userName: </span><span># not ile kullandığınız da boş veri anlamında olur</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"kullanıcı ismi boş bırakılamaz"</span><span>)</span></div>
+            <div><span> </span><span>elif</span><span> </span><span>len</span><span>(userName) </span><span>in</span><span> </span><span>range</span><span>(</span><span>3</span><span>,</span><span>10</span><span>): </span><span># karakter 3 ile 10 arasında olduğunda kaydedilir</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"hoş geldin "</span><span> </span><span>+</span><span> userName)</span></div>
+            <div><span> </span><span>break</span><span> </span><span># d&ouml;ng&uuml; tamamlanır</span></div>
+            <div><span> </span><span>else</span><span>:</span></div>
+            <div><span> </span><span>print</span><span>(</span><span>"kullanıcı adınız uzun yada kısa"</span><span>) </span><span># eğer iki şartlarıda karşılamıyorsa else devreye girer</span></div>
+            <br />
+            <div><span># -------------------------------------------------------------------------------------------------------------------------------</span></div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+
+
+        
+    </p>
