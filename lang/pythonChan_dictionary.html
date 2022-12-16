@@ -1,3 +1,21 @@
+<style>
+  /* scrool color */
+  ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+  ::-webkit-scrollbar-track {
+      background: #180133;
+    }
+    
+  ::-webkit-scrollbar-thumb {
+      background: #39017a;
+    }
+    
+  ::-webkit-scrollbar-thumb:hover {
+      background: #3e186b;
+    }
+</style>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=windows-1252">
@@ -12,7 +30,7 @@
     }
     </style>
   </head>
-  <body><b><span style="color: #666666;"># dictionary (sözlük)
+  <body><b><span style="color: #666666;"># dictionary (sï¿½zlï¿½k)
 -----------------------------------------------------------------------------------------------------------<br><br>
         oyunPuanlar&#305; = {<br>
         &nbsp;&nbsp;&nbsp; "half life 3":100,<br>
@@ -24,39 +42,39 @@
         &nbsp;&nbsp;&nbsp; "alt oyunlar":{<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "postal 32":62,<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "metin 3":32,<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "var k&#305;raft 3":"yüz puan"<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "var k&#305;raft 3":"yï¿½z puan"<br>
         <br>
         &nbsp;&nbsp;&nbsp; }<br>
         }<br>
         <br>
-        # sözlükde anahtar ve de&#287;er bulunur anahtar ça&#287;r&#305;l&#305;r de&#287;er al&#305;n&#305;r | ufak
-        not anahtar de&#287;erleri int oldu&#287;u için str çevirdim<br>
+        # sï¿½zlï¿½kde anahtar ve de&#287;er bulunur anahtar ï¿½a&#287;r&#305;l&#305;r de&#287;er al&#305;n&#305;r | ufak
+        not anahtar de&#287;erleri int oldu&#287;u iï¿½in str ï¿½evirdim<br>
         print("Y&#305;l&#305;n En iyi Oyunu: " + str(oyunPuanlar&#305;["half life 3"])) # bu
-        &#351;ekilde ça&#287;&#305;r&#305;r&#305;z yada<br>
+        &#351;ekilde ï¿½a&#287;&#305;r&#305;r&#305;z yada<br>
         #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         anahtar<br>
-        print("Y&#305;l&#305;n En çöp Oyunu: " + str(oyunPuanlar&#305;["alt oyunlar"]["metin
-        3"])) # alt anahtar&#305; ça&#287;&#305;rd&#305;m böyle<br>
+        print("Y&#305;l&#305;n En ï¿½ï¿½p Oyunu: " + str(oyunPuanlar&#305;["alt oyunlar"]["metin
+        3"])) # alt anahtar&#305; ï¿½a&#287;&#305;rd&#305;m bï¿½yle<br>
         #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         anahtar&nbsp;&nbsp;&nbsp;&nbsp; alt anahtar<br>
         <br>
         oyunPuanlar&#305;["dead island"] = 1000 # yeni de&#287;er eklemek<br>
         print(oyunPuanlar&#305;["dead island"])<br>
         <br>
-        oyunPuanlar&#305;["alt oyunlar"]["metin 3"] = 100 # böyle anahtar&#305;n de&#287;erini
+        oyunPuanlar&#305;["alt oyunlar"]["metin 3"] = 100 # bï¿½yle anahtar&#305;n de&#287;erini
         de&#287;i&#351;tirebilirsiniz<br>
         print(oyunPuanlar&#305;["alt oyunlar"]["metin 3"]) <br>
         <br>
-        oyunPuanlar&#305;.pop("half life 3") # anahtar silmek için<br>
+        oyunPuanlar&#305;.pop("half life 3") # anahtar silmek iï¿½in<br>
         print(oyunPuanlar&#305;)<br>
         <br>
-        oyunPuanlar&#305;.popitem() # rasgele anahtar silmek için<br>
+        oyunPuanlar&#305;.popitem() # rasgele anahtar silmek iï¿½in<br>
         <br>
-        yedek = oyunPuanlar&#305;.copy() # var olan sözlü&#287;ü yeni bir sözlük
-        olu&#351;turmak yada olan&#305;n içine kopyalamak için<br>
+        yedek = oyunPuanlar&#305;.copy() # var olan sï¿½zlï¿½&#287;ï¿½ yeni bir sï¿½zlï¿½k
+        olu&#351;turmak yada olan&#305;n iï¿½ine kopyalamak iï¿½in<br>
         print(yedek)<br>
         <br>
-        oyunPuanlar&#305;.clear() # tamamen silmek için<br>
+        oyunPuanlar&#305;.clear() # tamamen silmek iï¿½in<br>
         #
 -------------------------------------------------------------------------------------------------------------------------------<br></span></b>
   </body>

@@ -1,3 +1,22 @@
+<style>
+        /* scrool color */
+        ::-webkit-scrollbar {
+            width: 10px;
+          }
+      
+        ::-webkit-scrollbar-track {
+            background: #180133;
+          }
+          
+        ::-webkit-scrollbar-thumb {
+            background: #39017a;
+          }
+          
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3e186b;
+          }
+      </style>
+
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=windows-1252">
@@ -12,23 +31,23 @@
     }
     </style>
   </head>
-  <body><b><span style="color: #666666;"># Döngüler
+  <body><b><span style="color: #666666;"># Dï¿½ngï¿½ler
 ----------------------------------------------------------------------------------------------------------------------<br><br>
         number = 1<br>
         <br>
         <br>
-        # while döngüsü<br>
+        # while dï¿½ngï¿½sï¿½<br>
         <br>
-        while number &lt; 10: # basit bir döngü number 10 oldu&#287;unda biticek<br>
+        while number &lt; 10: # basit bir dï¿½ngï¿½ number 10 oldu&#287;unda biticek<br>
         &nbsp;&nbsp;&nbsp; number += 1<br>
         &nbsp;&nbsp;&nbsp; print(number)<br>
         <br>
         # a&#351;&#351;a&#287;&#305;daki biraz farkl&#305; bir loop<br>
         <br>
         saniye = 0<br>
-        while True: # while bir looptur daha detayl&#305; örnek olucak while true ise
-        break komutu gelene kadar aç&#305;k kal&#305;cak<br>
-        &nbsp;&nbsp;&nbsp; if saniye &lt;= 60: # 60 saniyeden büyük oldu&#287;u için<br>
+        while True: # while bir looptur daha detayl&#305; ï¿½rnek olucak while true ise
+        break komutu gelene kadar aï¿½&#305;k kal&#305;cak<br>
+        &nbsp;&nbsp;&nbsp; if saniye &lt;= 60: # 60 saniyeden bï¿½yï¿½k oldu&#287;u iï¿½in<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; saniye += 0.05 # e&#351;it
         olanadar saniye art&#305;cak<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print(int(saniye))<br>
@@ -36,39 +55,39 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break # ve saniye 60
         oldu&#287;unda &lt;= deki = tamamlanm&#305;&#351; olucak ve loop durucak<br>
         <br>
-        # bu baya detayl&#305; bir loop ve true false örne&#287;i incelemenizi tavsiye
-        ederim unutmay&#305;n ki &#351;uanda bende ö&#287;reniyorum<br>
-        import random # rasgele kalime ve say&#305; yapmak için python kütüphanesi<br>
+        # bu baya detayl&#305; bir loop ve true false ï¿½rne&#287;i incelemenizi tavsiye
+        ederim unutmay&#305;n ki &#351;uanda bende ï¿½&#287;reniyorum<br>
+        import random # rasgele kalime ve say&#305; yapmak iï¿½in python kï¿½tï¿½phanesi<br>
         <br>
         try: # python da bazen kullan&#305;c&#305; istedi&#287;imi &#351;ey d&#305;&#351;&#305;nda veri girmeye
-        çal&#305;&#351;abiliyor bu yüzden try ve except var<br>
-        &nbsp;&nbsp;&nbsp; lowNumber = int(input("En dü&#351;ük say&#305; gir: ")) # dü&#351;ük
-        say&#305; için input<br>
-        &nbsp;&nbsp;&nbsp; highNumber = int(input("En Yüksek Say&#305; gir: ")) #
-        yüksek say&#305; için input<br>
-        &nbsp;&nbsp;&nbsp; if lowNumber == highNumber: # e&#287;er dü&#351;ük say&#305; ve
-        yüksek say&#305; e&#351;it ise hata veriyor malesef<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; highNumber += 1 # bu yüzden
-        +1 yüksek say&#305; için <br>
+        ï¿½al&#305;&#351;abiliyor bu yï¿½zden try ve except var<br>
+        &nbsp;&nbsp;&nbsp; lowNumber = int(input("En dï¿½&#351;ï¿½k say&#305; gir: ")) # dï¿½&#351;ï¿½k
+        say&#305; iï¿½in input<br>
+        &nbsp;&nbsp;&nbsp; highNumber = int(input("En Yï¿½ksek Say&#305; gir: ")) #
+        yï¿½ksek say&#305; iï¿½in input<br>
+        &nbsp;&nbsp;&nbsp; if lowNumber == highNumber: # e&#287;er dï¿½&#351;ï¿½k say&#305; ve
+        yï¿½ksek say&#305; e&#351;it ise hata veriyor malesef<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; highNumber += 1 # bu yï¿½zden
+        +1 yï¿½ksek say&#305; iï¿½in <br>
         except ValueError: # e&#287;er say&#305; yerine harf girerse hata mesaj&#305; veriyoruz<br>
         &nbsp;&nbsp;&nbsp; print("say&#305; gir --&gt; 1234 gibi falan")<br>
         else: # e&#287;er sorun yok ise i&#351;lem ba&#351;l&#305;yor<br>
         &nbsp;&nbsp;&nbsp; number = random.randrange(lowNumber, highNumber) #
-        yüksek say&#305;y&#305; ve dü&#351;ük say&#305; aras&#305;nda bir say&#305;y&#305; number için at&#305;yoruz<br>
+        yï¿½ksek say&#305;y&#305; ve dï¿½&#351;ï¿½k say&#305; aras&#305;nda bir say&#305;y&#305; number iï¿½in at&#305;yoruz<br>
         &nbsp;&nbsp;&nbsp;
         #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        .randint(lowNumber, highNumber) burada yüksek ve du&#351;uk say&#305; dahil<br>
+        .randint(lowNumber, highNumber) burada yï¿½ksek ve du&#351;uk say&#305; dahil<br>
         &nbsp;&nbsp;&nbsp; while True:<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; guess = int(input("Tahmin
         Gir: ")) # ve kullan&#305;c&#305; tahmit ediyor tekrar tekrar<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if guess &gt; number:&nbsp;
-        #yüksek ise tahmin<br>
+        #yï¿½ksek ise tahmin<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         print("fazla att&#305;n ufak at")<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif guess &lt; number: #
-        dü&#351;ük ise tahmin<br>
+        dï¿½&#351;ï¿½k ise tahmin<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        print("çok dü&#351;ük söyledin")<br>
+        print("ï¿½ok dï¿½&#351;ï¿½k sï¿½yledin")<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else: # e&#287;er do&#287;ru tahmin ise<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         print("evet do&#287;ru bildin kazanan numara: " + str(number))<br>
@@ -79,11 +98,11 @@
         #
 -------------------------------------------------------------------------------------------------------------------------------<br><br>
         <br>
-        # for döngüsü
+        # for dï¿½ngï¿½sï¿½
 -------------------------------------------------------------------------------------------------------------------<br>gameList
         = ["half life 3", "portal 3", "left 4 dead 3", "dota 3"]<br>
-        for uwu in gameList: # her döngüde gamelist den 1 de&#287;er uwu ya atan&#305;p
-        print ile ç&#305;kt&#305; al&#305;n&#305;yor liste bitene kadar<br>
+        for uwu in gameList: # her dï¿½ngï¿½de gamelist den 1 de&#287;er uwu ya atan&#305;p
+        print ile ï¿½&#305;kt&#305; al&#305;n&#305;yor liste bitene kadar<br>
         &nbsp;&nbsp;&nbsp; print(uwu) # uwu<br>
         <br>
         userName = input("Kullan&#305;c&#305; ad&#305;n&#305; Gir: ")<br>
@@ -91,25 +110,25 @@
         yazd&#305;rmak<br>
         &nbsp;&nbsp;&nbsp; print(lol)<br>
         <br>
-        turkishCharachter = "&#351;ç&#287;ö&#304;ü&#305;"<br>
-        userName = input("bir &#351;eyler söyle: ")<br>
+        turkishCharachter = "&#351;ï¿½&#287;ï¿½&#304;ï¿½&#305;"<br>
+        userName = input("bir &#351;eyler sï¿½yle: ")<br>
         <br>
-        for charachter in userName: # bütün harfleri kontrol edip<br>
-        &nbsp;&nbsp;&nbsp; if charachter in turkishCharachter:&nbsp; # türkçe
+        for charachter in userName: # bï¿½tï¿½n harfleri kontrol edip<br>
+        &nbsp;&nbsp;&nbsp; if charachter in turkishCharachter:&nbsp; # tï¿½rkï¿½e
         karakter varm&#305; diye bak&#305;cak<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print("| türkçe karakter
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print("| tï¿½rkï¿½e karakter
         kullanma |")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quit() # var ise ç&#305;k&#305;&#351;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quit() # var ise ï¿½&#305;k&#305;&#351;
         yap&#305;cak<br>
         print("Ho&#351; geldin: " + userName) # yok ise tamamlan&#305;cak<br>
         <br>
         for lol in range(2,102,2):&nbsp; # ba&#351;lama yeri, biti&#351; yeri, atlama
         say&#305;s&#305;<br>
-        &nbsp;&nbsp;&nbsp; print(lol) # böylece 2 den ba&#351;lay&#305;p 102 kadar gidicek
+        &nbsp;&nbsp;&nbsp; print(lol) # bï¿½ylece 2 den ba&#351;lay&#305;p 102 kadar gidicek
         tabi 100 son yoksa 99 da kal&#305;r ve 2li atlama yap&#305;cak<br>
         <br>
         <br>
-        # while ile range döngüsünü ayn&#305; anda kullanmak<br>
+        # while ile range dï¿½ngï¿½sï¿½nï¿½ ayn&#305; anda kullanmak<br>
         while True:<br>
         &nbsp;&nbsp;&nbsp; userName = input("Kullan&#305;c&#305; Ad&#305;: ")<br>
         &nbsp;&nbsp;&nbsp; if not userName: # not ile kulland&#305;&#287;&#305;n&#305;z da bo&#351; veri
@@ -120,7 +139,7 @@
         10 aras&#305;nda oldu&#287;unda kaydedilir<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print("ho&#351; geldin " +
         userName)<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break # döngü tamamlan&#305;r<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break # dï¿½ngï¿½ tamamlan&#305;r<br>
         &nbsp;&nbsp;&nbsp; else:<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print("kullan&#305;c&#305; ad&#305;n&#305;z uzun
         yada k&#305;sa") # e&#287;er iki &#351;artlar&#305;da kar&#351;&#305;lam&#305;yorsa else devreye girer<br>
