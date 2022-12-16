@@ -13,105 +13,77 @@
 
 
         <div>
-            <div>
-            <div>
-            <div>
-            <div>
-            <div>
-            <div>
-            <div>
-            <div>
-            <div>
-            <div>
-            <div>
-            <div>
-            <div>
-            <div>
-            <div><span># matematik işlemlerine cevap verme uygulaması ----------------------------------------------------------------------------------</span></div>
-            <div><span>import</span><span> random</span></div>
-            <div><span>userpuan </span><span>=</span><span> </span><span>0</span></div>
+            <div><strong><span style="color: #ffffff;"># matematik işlemlerine cevap verme uygulaması ----------------------------------------------------------------------------------</span></strong></div>
+            <div><strong><span style="color: #ffffff;">import random</span></strong></div>
+            <div><strong><span style="color: #ffffff;">userpuan = 0</span></strong></div>
             <br />
-            <div><span>while</span><span> </span><span>True</span><span>:</span></div>
+            <div><strong><span style="color: #ffffff;">while True:</span></strong></div>
             <br />
-            <div><span> number1 </span><span>=</span><span> random.randint(</span><span>1</span><span>, </span><span>100</span><span>)</span></div>
-            <div><span> number2 </span><span>=</span><span> random.randint(</span><span>1</span><span>, </span><span>100</span><span>)</span></div>
-            <div><span> math </span><span>=</span><span> random.randint(</span><span>1</span><span>, </span><span>4</span><span>)</span></div>
-            <div><span> </span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"Puan: "</span><span> </span><span>+</span><span> </span><span>str</span><span>(userpuan))</span></div>
+            <div><strong><span style="color: #ffffff;">number1 = random.randint(1, 100)</span></strong></div>
+            <div><strong><span style="color: #ffffff;">number2 = random.randint(1, 100)</span></strong></div>
+            <div><strong><span style="color: #ffffff;">math = random.randint(1, 4)</span></strong></div>
+            <div>&nbsp;</div>
+            <div><strong><span style="color: #ffffff;">print("Puan: "+str(userpuan))</span></strong></div>
             <br />
-            <div><span> </span><span>print</span><span>(</span><span>"-"</span><span>*</span><span>30</span><span> , </span><span>"</span><span>\n</span><span>"</span><span>)</span></div>
-            <div><span> </span><span>if</span><span> math </span><span>==</span><span> </span><span>1</span><span>:</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>str</span><span>(number1) </span><span>+</span><span> </span><span>" + "</span><span> </span><span>+</span><span> </span><span>str</span><span>(number2) </span><span>+</span><span> </span><span>" = ??"</span><span>)</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"eğer soruyu boş bırakırsan -1 puan alıcaksın"</span><span>)</span></div>
-            <div><span> mathX </span><span>=</span><span> </span><span>input</span><span>(</span><span>"sorunun cevap:&gt; "</span><span>)</span></div>
-            <div><span> mathEnd </span><span>=</span><span> number1 </span><span>+</span><span> number2</span></div>
-            <div><span> </span><span>if</span><span> </span><span>not</span><span> mathX:</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"bir şey unuttun sanırım..."</span><span>)</span></div>
-            <div><span> userpuan </span><span>-=</span><span> </span><span>1</span></div>
-            <div><span> </span><span>elif</span><span> mathEnd </span><span>!=</span><span> </span><span>int</span><span>(mathX):</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"yanlış bildin sıradaki soru geliyor"</span><span>)</span></div>
-            <div><span> userpuan </span><span>-=</span><span> </span><span>2</span></div>
-            <div><span> </span><span>else</span><span>:</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"doğru bildin"</span><span>)</span></div>
-            <div><span> userpuan </span><span>+=</span><span> </span><span>1</span></div>
-            <div><span> </span><span>elif</span><span> math </span><span>==</span><span> </span><span>2</span><span>:</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>str</span><span>(number1) </span><span>+</span><span> </span><span>" - "</span><span> </span><span>+</span><span> </span><span>str</span><span>(number2) </span><span>+</span><span> </span><span>" = ??"</span><span>)</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"eğer soruyu boş bırakırsan -1 puan alıcaksın"</span><span>)</span></div>
-            <div><span> mathX </span><span>=</span><span> </span><span>input</span><span>(</span><span>"sorunun cevap:&gt; "</span><span>)</span></div>
-            <div><span> mathEnd </span><span>=</span><span> number1 </span><span>-</span><span> number2</span></div>
-            <div><span> </span><span>if</span><span> </span><span>not</span><span> mathX:</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"bir şey unuttun sanırım..."</span><span>)</span></div>
-            <div><span> userpuan </span><span>-=</span><span> </span><span>1</span></div>
-            <div><span> </span><span>elif</span><span> mathEnd </span><span>!=</span><span> </span><span>int</span><span>(mathX):</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"yanlış bildin sıradaki soru geliyor"</span><span>)</span></div>
-            <div><span> userpuan </span><span>-=</span><span> </span><span>2</span></div>
-            <div><span> </span><span>else</span><span>:</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"doğru bildin"</span><span>)</span></div>
-            <div><span> userpuan </span><span>+=</span><span> </span><span>1</span></div>
-            <div><span> </span><span>elif</span><span> math </span><span>==</span><span> </span><span>3</span><span>:</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>str</span><span>(number1) </span><span>+</span><span> </span><span>" * "</span><span> </span><span>+</span><span> </span><span>str</span><span>(number2) </span><span>+</span><span> </span><span>" = ??"</span><span>)</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"eğer soruyu boş bırakırsan -1 puan alıcaksın"</span><span>)</span></div>
-            <div><span> mathX </span><span>=</span><span> </span><span>input</span><span>(</span><span>"sorunun cevap:&gt; "</span><span>)</span></div>
-            <div><span> mathEnd </span><span>=</span><span> number1 </span><span>*</span><span> number2</span></div>
-            <div><span> </span><span>if</span><span> </span><span>not</span><span> mathX:</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"bir şey unuttun sanırım..."</span><span>)</span></div>
-            <div><span> userpuan </span><span>-=</span><span> </span><span>1</span></div>
-            <div><span> </span><span>elif</span><span> </span><span>int</span><span>(mathEnd) </span><span>!=</span><span> </span><span>int</span><span>(mathX):</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"yanlış bildin sıradaki soru geliyor"</span><span>)</span></div>
-            <div><span> userpuan </span><span>-=</span><span> </span><span>2</span></div>
-            <div><span> </span><span>else</span><span>:</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"doğru bildin"</span><span>)</span></div>
-            <div><span> userpuan </span><span>+=</span><span> </span><span>1</span></div>
-            <div><span> </span><span>elif</span><span> math </span><span>==</span><span> </span><span>4</span><span>:</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>str</span><span>(number1) </span><span>+</span><span> </span><span>" / "</span><span> </span><span>+</span><span> </span><span>str</span><span>(number2) </span><span>+</span><span> </span><span>" = ??"</span><span>)</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"eğer soruyu boş bırakırsan -1 puan alıcaksın"</span><span>)</span></div>
-            <div><span> mathX </span><span>=</span><span> </span><span>input</span><span>(</span><span>"sorunun cevap:&gt; "</span><span>)</span></div>
-            <div><span> mathEnd </span><span>=</span><span> number1 </span><span>/</span><span> number2</span></div>
-            <div><span> </span><span>if</span><span> </span><span>not</span><span> mathX:</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"bir şey unuttun sanırım..."</span><span>)</span></div>
-            <div><span> userpuan </span><span>-=</span><span> </span><span>1</span></div>
-            <div><span> </span><span>elif</span><span> </span><span>int</span><span>(mathEnd) </span><span>!=</span><span> </span><span>int</span><span>(mathX):</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"yanlış bildin sıradaki soru geliyor"</span><span>)</span></div>
-            <div><span> userpuan </span><span>-=</span><span> </span><span>2</span></div>
-            <div><span> </span><span>else</span><span>:</span></div>
-            <div><span> </span><span>print</span><span>(</span><span>"doğru bildin"</span><span>)</span></div>
-            <div><span> userpuan </span><span>+=</span><span> </span><span>1</span></div>
-            <div><span>#--------------------------------------------------------------------------------------------------------------------------------</span></div>
-            <br /><br /></div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
+            <div><strong><span style="color: #ffffff;">print("-"*30 , "\n")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">if math ==1:</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print(str(number1) +" + "+str(number2) +" = ??")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("eğer soruyu boş bırakırsan -1 puan alıcaksın")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">mathX = input("sorunun cevap:&gt; ")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">mathEnd = number1 + number2</span></strong></div>
+            <div><strong><span style="color: #ffffff;">ifnot mathX:</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("bir şey unuttun sanırım...")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">userpuan -= 1</span></strong></div>
+            <div><strong><span style="color: #ffffff;">elif mathEnd !=int(mathX):</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("yanlış bildin sıradaki soru geliyor")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">userpuan -= 2</span></strong></div>
+            <div><strong><span style="color: #ffffff;">else:</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("doğru bildin")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">userpuan += 1</span></strong></div>
+            <div><strong><span style="color: #ffffff;">elif math ==2:</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print(str(number1) +" - "+str(number2) +" = ??")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("eğer soruyu boş bırakırsan -1 puan alıcaksın")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">mathX = input("sorunun cevap:&gt; ")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">mathEnd = number1 - number2</span></strong></div>
+            <div><strong><span style="color: #ffffff;">ifnot mathX:</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("bir şey unuttun sanırım...")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">userpuan -= 1</span></strong></div>
+            <div><strong><span style="color: #ffffff;">elif mathEnd !=int(mathX):</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("yanlış bildin sıradaki soru geliyor")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">userpuan -= 2</span></strong></div>
+            <div><strong><span style="color: #ffffff;">else:</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("doğru bildin")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">userpuan += 1</span></strong></div>
+            <div><strong><span style="color: #ffffff;">elif math ==3:</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print(str(number1) +" * "+str(number2) +" = ??")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("eğer soruyu boş bırakırsan -1 puan alıcaksın")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">mathX = input("sorunun cevap:&gt; ")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">mathEnd = number1 * number2</span></strong></div>
+            <div><strong><span style="color: #ffffff;">ifnot mathX:</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("bir şey unuttun sanırım...")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">userpuan -= 1</span></strong></div>
+            <div><strong><span style="color: #ffffff;">elifint(mathEnd) !=int(mathX):</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("yanlış bildin sıradaki soru geliyor")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">userpuan -= 2</span></strong></div>
+            <div><strong><span style="color: #ffffff;">else:</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("doğru bildin")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">userpuan += 1</span></strong></div>
+            <div><strong><span style="color: #ffffff;">elif math ==4:</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print(str(number1) +" / "+str(number2) +" = ??")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("eğer soruyu boş bırakırsan -1 puan alıcaksın")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">mathX = input("sorunun cevap:&gt; ")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">mathEnd = number1 / number2</span></strong></div>
+            <div><strong><span style="color: #ffffff;">ifnot mathX:</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("bir şey unuttun sanırım...")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">userpuan -= 1</span></strong></div>
+            <div><strong><span style="color: #ffffff;">elifint(mathEnd) !=int(mathX):</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("yanlış bildin sıradaki soru geliyor")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">userpuan -= 2</span></strong></div>
+            <div><strong><span style="color: #ffffff;">else:</span></strong></div>
+            <div><strong><span style="color: #ffffff;">print("doğru bildin")</span></strong></div>
+            <div><strong><span style="color: #ffffff;">userpuan += 1</span></strong></div>
+            <div><strong><span style="color: #ffffff;">#--------------------------------------------------------------------------------------------------------------------------------</span></strong></div>
+            <br /><br /><br /></div>
 
 
 
