@@ -1,105 +1,49 @@
 <style>
-  a{
-    text-decoration: none;
+  pre{
     color: aliceblue;
   }
-
-  h1{
-    color: aliceblue;
-  }
-
-  p{
-    color: aliceblue;
-  }
-
-  h2{
-    color: aliceblue;
-  }
-
-  ol{
-    color: aliceblue;
-    list-style: none;
-    display: block;
-    zoom: 1;
-    display: inline;
-  }
-
-
-  table{
-    border-collapse: separate;
-    border-spacing: 30px;
+  
+  /* scrool color */
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+  
+    ::-webkit-scrollbar-track {
+        background: #180133;
+      }
+      
+    ::-webkit-scrollbar-thumb {
+        background: #39017a;
+      }
+      
+    ::-webkit-scrollbar-thumb:hover {
+        background: #3e186b;
+      }
+  
+   
+  </style>
+  
+  
+  
+  <pre>
     
-  }
-
-  td{
-    background-color: #39017a80;
-    border-radius: 1%;
-  }
-
-/* scrool color */
-  ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-  ::-webkit-scrollbar-track {
-      background: #180133;
-    }
+    # listeler ----------------------------------------------------------------------------------------------------------------------
+    oyun_listesi = ["half life", "left 4 dead", "GTA", "NFS", "Serious Sam", "Duke Nukem forever", "fallout"]
+    #                   0               1         2      3          4              5            6      7
+    print(oyun_listesi[0])  # [0:6:1] listeden değer çağırmak
     
-  ::-webkit-scrollbar-thumb {
-      background: #39017a;
-    }
+    oyun_listesi.reverse() # tersine çevirme
+    oyun_listesi.sort()    # alfabetik sıraya göre sıralama ufak not sayı ve yazı sıraya sokulamaz
+    oyun_listesi.count("half life") # listede kaç tane var ise sayı vericek
+    # başlangıç:bitiş:atlama sayısı
+    oyun_listesi.append("Half Life 3") # listeye yeni değer ekleme
+    oyun_listesi.remove("Duke Nukem forever") # listeden çıkarma
+    oyun_listesi.clear() # listeyi demizleme
+    # -------------------------------------------------------------------------------------------------------------------------------
+     
+  
+  
+  
     
-  ::-webkit-scrollbar-thumb:hover {
-      background: #3e186b;
-    }
-
- 
-</style>
-
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <style>
-    #notice{
-        color: azure;
-        font-size: 25px;
-    }
-    p{
-        color: aliceblue;
-        font-size: 35px;
-    }
-    </style>
-  </head>
-  <body><b><span style="color: #666666;"># listeler
-----------------------------------------------------------------------------------------------------------------------<br>oyun_listesi
-        = ["half life", "left 4 dead", "GTA", "NFS", "Serious Sam", "Duke Nukem
-        forever", "fallout"]<br>
-        #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-        0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp; &nbsp; &nbsp;&nbsp;
-        1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 6<br>
-        print(oyun_listesi[0])&nbsp; #
-        [0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        :6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        :1] listeden de&#287;er �a&#287;&#305;rmak<br>
-        #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        ba&#351;lang&#305;�&nbsp;&nbsp;&nbsp;&nbsp;
-        :biti&#351;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :atlama say&#305;s&#305;<br>
-        oyun_listesi.reverse() # tersine �evirme<br>
-        oyun_listesi.sort()&nbsp;&nbsp;&nbsp; # alfabetik s&#305;raya g�re s&#305;ralama
-        ufak not say&#305; ve yaz&#305; s&#305;raya sokulamaz<br>
-        oyun_listesi.count("half life") # listede ka� tane var ise say&#305; vericek<br>
-        <br>
-        oyun_listesi.append("Half Life 3") # listeye yeni de&#287;er ekleme<br>
-        oyun_listesi.remove("Duke Nukem forever") # listeden �&#305;karma<br>
-        oyun_listesi.clear() # listeyi demizleme<br>
-        #
--------------------------------------------------------------------------------------------------------------------------------</span></b></body>
-</html>
+  </pre>
+  

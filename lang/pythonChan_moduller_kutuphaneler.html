@@ -1,108 +1,58 @@
 <style>
-  a{
-    text-decoration: none;
+  pre{
     color: aliceblue;
   }
-
-  h1{
-    color: aliceblue;
-  }
-
-  p{
-    color: aliceblue;
-  }
-
-  h2{
-    color: aliceblue;
-  }
-
-  ol{
-    color: aliceblue;
-    list-style: none;
-    display: block;
-    zoom: 1;
-    display: inline;
-  }
-
-
-  table{
-    border-collapse: separate;
-    border-spacing: 30px;
+  
+  /* scrool color */
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+  
+    ::-webkit-scrollbar-track {
+        background: #180133;
+      }
+      
+    ::-webkit-scrollbar-thumb {
+        background: #39017a;
+      }
+      
+    ::-webkit-scrollbar-thumb:hover {
+        background: #3e186b;
+      }
+  
+   
+  </style>
+  
+  
+  
+  <pre>
+  
+  
+    # modüller ----------------------------------------------------------------------------------------------------------------------
+    import test     # test.py import ettik ama içinde ne var ise hepsini import ettik
+    from test import gameList # burada gamelist adında bir listeyi import ettim
+    from test import * # tek olarak değil hepsini import ettik
     
-  }
-
-  td{
-    background-color: #39017a80;
-    border-radius: 1%;
-  }
-
-/* scrool color */
-  ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-  ::-webkit-scrollbar-track {
-      background: #180133;
-    }
+    # ursina panda3d tabanlı oyun kütüphanesidir yada motoru
+    from ursina import * # bu şekilde import yapdığımız da
+    app = Ursina() #uygulamayı tek bir fonsiyon üzerin verip
+    e = Entity(...) # geliştirmeye normal bir şekilde devam ediyoruz
     
-  ::-webkit-scrollbar-thumb {
-      background: #39017a;
-    }
+    import ursina # fakat normal import yapdığımız da
+    app = ursina.Ursina() # her seferinde başına ursina. diye ekleme yapmamız gerekiyor gibi ilginç import şekilleri mevcut
+    e = ursina.Entity(...)
     
-  ::-webkit-scrollbar-thumb:hover {
-      background: #3e186b;
-    }
-
- 
-</style>
-
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <style>
-    #notice{
-        color: azure;
-        font-size: 25px;
-    }
-    p{
-        color: aliceblue;
-        font-size: 35px;
-    }
-    </style>
-  </head>
-  <body><b><span style="color: #666666;"># mod�ller
-----------------------------------------------------------------------------------------------------------------------<br>import
-        test&nbsp;&nbsp;&nbsp;&nbsp; # test.py import ettik ama i�inde ne var
-        ise hepsini import ettik<br>
-        from test import gameList # burada gamelist ad&#305;nda bir listeyi import
-        ettim<br>
-        from test import * # tek olarak de&#287;il hepsini import ettik<br>
-        <br>
-        # ursina panda3d tabanl&#305; oyun k�t�phanesidir yada motoru<br>
-        from ursina import * # bu &#351;ekilde import yapd&#305;&#287;&#305;m&#305;z da<br>
-        app = Ursina() #uygulamay&#305; tek bir fonsiyon �zerin verip<br>
-        e = Entity(...) # geli&#351;tirmeye normal bir &#351;ekilde devam ediyoruz<br>
-        <br>
-        import ursina # fakat normal import yapd&#305;&#287;&#305;m&#305;z da<br>
-        app = ursina.Ursina() # her seferinde ba&#351;&#305;na ursina. diye ekleme
-        yapmam&#305;z gerekiyor gibi ilgin� import &#351;ekilleri mevcut<br>
-        e = ursina.Entity(...)<br>
-        <br>
-        # gameList = ["half life 3", "portal 3", "left 4 dead 3", "dota 3"]
-        &lt;---- test.py nin i�inde olan liste<br>
-        print(test.gameList) # b�ylece test ad&#305;ndaki python dosyam&#305;z&#305; k�t�phane
-        gibi kullanm&#305;&#351; olduk<br>
-        <br>
-        import random # rasgele k�t�phanesini daha �nce g�stermi&#351;dim ama o
-        �rnekde liste i�in yer yoktu<br>
-        randomChoise = random.choice(test.gameList) # .choice() ile liste i�inde
-        olan de&#287;erler aras&#305;nda rasgele �&#305;kt&#305; alm&#305;&#351; olduk<br>
-        print(randomChoise)<br>
-        #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        .sample(test.gamelist, 3) listeden istedi&#287;imiz kadar se�mesini istiyoruz
-        b�yle<br>
-        <br>
-#--------------------------------------------------------------------------------------------------------------------------------<br>
-      </span></b>
-  </body>
-</html>
+    # gameList = ["half life 3", "portal 3", "left 4 dead 3", "dota 3"] <---- test.py nin içinde olan liste
+    print(test.gameList) # böylece test adındaki python dosyamızı kütüphane gibi kullanmış olduk
+    
+    import random # rasgele kütüphanesini daha önce göstermişdim ama o örnekde liste için yer yoktu
+    randomChoise = random.choice(test.gameList) # .choice() ile liste içinde olan değerler arasında rasgele çıktı almış olduk
+    print(randomChoise)
+    #                    .sample(test.gamelist, 3) listeden istediğimiz kadar seçmesini istiyoruz böyle
+    
+    #--------------------------------------------------------------------------------------------------------------------------------
+    
+  
+    
+  </pre>
+  

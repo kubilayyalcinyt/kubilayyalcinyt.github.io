@@ -1,187 +1,106 @@
 <style>
-  a{
-    text-decoration: none;
+  pre{
     color: aliceblue;
   }
-
-  h1{
-    color: aliceblue;
-  }
-
-  p{
-    color: aliceblue;
-  }
-
-  h2{
-    color: aliceblue;
-  }
-
-  ol{
-    color: aliceblue;
-    list-style: none;
-    display: block;
-    zoom: 1;
-    display: inline;
-  }
-
-
-  table{
-    border-collapse: separate;
-    border-spacing: 30px;
+  
+  /* scrool color */
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+  
+    ::-webkit-scrollbar-track {
+        background: #180133;
+      }
+      
+    ::-webkit-scrollbar-thumb {
+        background: #39017a;
+      }
+      
+    ::-webkit-scrollbar-thumb:hover {
+        background: #3e186b;
+      }
+  
+   
+  </style>
+  
+  
+  
+  <pre>
+  
+    # matematik işlemlerine cevap verme uygulaması ----------------------------------------------------------------------------------
+    import random
+    userpuan = 0
     
-  }
-
-  td{
-    background-color: #39017a80;
-    border-radius: 1%;
-  }
-
-/* scrool color */
-  ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-  ::-webkit-scrollbar-track {
-      background: #180133;
-    }
+    while True:
     
-  ::-webkit-scrollbar-thumb {
-      background: #39017a;
-    }
+        number1 = random.randint(1, 100)
+        number2 = random.randint(1, 100)
+        math = random.randint(1, 4)
+        
+        print("Puan: " + str(userpuan))
     
-  ::-webkit-scrollbar-thumb:hover {
-      background: #3e186b;
-    }
-
- 
-</style>
-
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <style>
-    #notice{
-        color: azure;
-        font-size: 25px;
-    }
-    p{
-        color: aliceblue;
-        font-size: 35px;
-    }
-    </style>
-  </head>
-  <body><b><span style="color: #666666;"># matematik i&#351;lemlerine cevap verme
-        uygulamas&#305;
-----------------------------------------------------------------------------------<br>import
-        random<br>
-        userpuan = 0<br>
-        <br>
-        while True:<br>
-        <br>
-        &nbsp;&nbsp;&nbsp; number1 = random.randint(1, 100)<br>
-        &nbsp;&nbsp;&nbsp; number2 = random.randint(1, 100)<br>
-        &nbsp;&nbsp;&nbsp; math = random.randint(1, 4)<br>
-        &nbsp;&nbsp; &nbsp;<br>
-        &nbsp;&nbsp;&nbsp; print("Puan: " + str(userpuan))<br>
-        <br>
-        &nbsp;&nbsp;&nbsp; print("-"*30 , "\n")<br>
-        &nbsp;&nbsp;&nbsp; if math == 1:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print(str(number1) + " + " +
-        str(number2) + " = ??")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print("e&#287;er soruyu bo&#351;
-        b&#305;rak&#305;rsan -1 puan al&#305;caks&#305;n")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mathX = input("sorunun
-        cevap:&gt; ")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mathEnd = number1 + number2<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if not mathX:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        print("bir &#351;ey unuttun san&#305;r&#305;m...")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        userpuan -= 1<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif mathEnd != int(mathX):<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        print("yanl&#305;&#351; bildin s&#305;radaki soru geliyor")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        userpuan -= 2<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        print("do&#287;ru bildin")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        userpuan += 1<br>
-        &nbsp;&nbsp;&nbsp; elif math == 2:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print(str(number1) + " - " +
-        str(number2) + " = ??")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print("e&#287;er soruyu bo&#351;
-        b&#305;rak&#305;rsan -1 puan al&#305;caks&#305;n")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mathX = input("sorunun
-        cevap:&gt; ")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mathEnd = number1 - number2<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if not mathX:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        print("bir &#351;ey unuttun san&#305;r&#305;m...")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        userpuan -= 1<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif mathEnd != int(mathX):<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        print("yanl&#305;&#351; bildin s&#305;radaki soru geliyor")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        userpuan -= 2<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        print("do&#287;ru bildin")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        userpuan += 1<br>
-        &nbsp;&nbsp;&nbsp; elif math == 3:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print(str(number1) + " * " +
-        str(number2) + " = ??")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print("e&#287;er soruyu bo&#351;
-        b&#305;rak&#305;rsan -1 puan al&#305;caks&#305;n")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mathX = input("sorunun
-        cevap:&gt; ")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mathEnd = number1 * number2<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if not mathX:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        print("bir &#351;ey unuttun san&#305;r&#305;m...")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        userpuan -= 1<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif int(mathEnd) !=
-        int(mathX):<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        print("yanl&#305;&#351; bildin s&#305;radaki soru geliyor")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        userpuan -= 2<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        print("do&#287;ru bildin")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        userpuan += 1<br>
-        &nbsp;&nbsp;&nbsp; elif math == 4:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print(str(number1) + " / " +
-        str(number2) + " = ??")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print("e&#287;er soruyu bo&#351;
-        b&#305;rak&#305;rsan -1 puan al&#305;caks&#305;n")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mathX = input("sorunun
-        cevap:&gt; ")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mathEnd = number1 / number2<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if not mathX:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        print("bir &#351;ey unuttun san&#305;r&#305;m...")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        userpuan -= 1<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif int(mathEnd) !=
-        int(mathX):<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        print("yanl&#305;&#351; bildin s&#305;radaki soru geliyor")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        userpuan -= 2<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        print("do&#287;ru bildin")<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        userpuan += 1<br>
-#--------------------------------------------------------------------------------------------------------------------------------<br>
-        <br>
-        <br>
-      </span></b>
-  </body>
-</html>
+        print("-"*30 , "\n")
+        if math == 1:
+            print(str(number1) + " + " + str(number2) + " = ??")
+            print("eğer soruyu boş bırakırsan -1 puan alıcaksın")
+            mathX = input("sorunun cevap:> ")
+            mathEnd = number1 + number2
+            if not mathX:
+                print("bir şey unuttun sanırım...")
+                userpuan -= 1
+            elif mathEnd != int(mathX):
+                print("yanlış bildin sıradaki soru geliyor")
+                userpuan -= 2
+            else:
+                print("doğru bildin")
+                userpuan += 1
+        elif math == 2:
+            print(str(number1) + " - " + str(number2) + " = ??")
+            print("eğer soruyu boş bırakırsan -1 puan alıcaksın")
+            mathX = input("sorunun cevap:> ")
+            mathEnd = number1 - number2
+            if not mathX:
+                print("bir şey unuttun sanırım...")
+                userpuan -= 1
+            elif mathEnd != int(mathX):
+                print("yanlış bildin sıradaki soru geliyor")
+                userpuan -= 2
+            else:
+                print("doğru bildin")
+                userpuan += 1
+        elif math == 3:
+            print(str(number1) + " * " + str(number2) + " = ??")
+            print("eğer soruyu boş bırakırsan -1 puan alıcaksın")
+            mathX = input("sorunun cevap:> ")
+            mathEnd = number1 * number2
+            if not mathX:
+                print("bir şey unuttun sanırım...")
+                userpuan -= 1
+            elif int(mathEnd) != int(mathX):
+                print("yanlış bildin sıradaki soru geliyor")
+                userpuan -= 2
+            else:
+                print("doğru bildin")
+                userpuan += 1
+        elif math == 4:
+            print(str(number1) + " / " + str(number2) + " = ??")
+            print("eğer soruyu boş bırakırsan -1 puan alıcaksın")
+            mathX = input("sorunun cevap:> ")
+            mathEnd = number1 / number2
+            if not mathX:
+                print("bir şey unuttun sanırım...")
+                userpuan -= 1
+            elif int(mathEnd) != int(mathX):
+                print("yanlış bildin sıradaki soru geliyor")
+                userpuan -= 2
+            else:
+                print("doğru bildin")
+                userpuan += 1
+    #--------------------------------------------------------------------------------------------------------------------------------
+    
+    
+  
+  
+    
+  </pre>
+  

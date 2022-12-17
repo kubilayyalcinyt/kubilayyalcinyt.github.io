@@ -1,86 +1,42 @@
 <style>
-  a{
-    text-decoration: none;
+  pre{
     color: aliceblue;
   }
-
-  h1{
-    color: aliceblue;
-  }
-
-  p{
-    color: aliceblue;
-  }
-
-  h2{
-    color: aliceblue;
-  }
-
-  ol{
-    color: aliceblue;
-    list-style: none;
-    display: block;
-    zoom: 1;
-    display: inline;
-  }
-
-
-  table{
-    border-collapse: separate;
-    border-spacing: 30px;
+  
+  /* scrool color */
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+  
+    ::-webkit-scrollbar-track {
+        background: #180133;
+      }
+      
+    ::-webkit-scrollbar-thumb {
+        background: #39017a;
+      }
+      
+    ::-webkit-scrollbar-thumb:hover {
+        background: #3e186b;
+      }
+  
+   
+  </style>
+  
+  
+  
+  <pre>
+  
+    # Kullanıcı girdisi almak için -
+    # -------------------------------------------------------------------------------------------------------------------------------
+    # bu arayüz barındırmayan programlar içindir
+    telNo = input("telefon numarası gir: ") #input ile kullanıcıdan değer alabilirsiniz "içine yazılanlar görüntü için"
+    # int(input("telefon numarası gir: ")) bu şekilde yapmazsanız gelen değer yazı tipinde olur
+    print(type(telNo)) # bu şekilde tipine bakabilirsin
+    # -------------------------------------------------------------------------------------------------------------------------------
     
-  }
-
-  td{
-    background-color: #39017a80;
-    border-radius: 1%;
-  }
-
-/* scrool color */
-  ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-  ::-webkit-scrollbar-track {
-      background: #180133;
-    }
+  
+  
     
-  ::-webkit-scrollbar-thumb {
-      background: #39017a;
-    }
-    
-  ::-webkit-scrollbar-thumb:hover {
-      background: #3e186b;
-    }
-
- 
-</style>
-
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <style>
-    #notice{
-        color: azure;
-        font-size: 25px;
-    }
-    p{
-        color: aliceblue;
-        font-size: 35px;
-    }
-    </style>
-  </head>
-  <body><b><span style="color: #666666;"><br>
-        # Kullan&#305;c&#305; girdisi almak i�in -<br>
-        #
--------------------------------------------------------------------------------------------------------------------------------<br>#
-        bu aray�z bar&#305;nd&#305;rmayan programlar i�indir<br>
-        telNo = input("telefon numaras&#305; gir: ") #input ile kullan&#305;c&#305;dan de&#287;er
-        alabilirsiniz "i�ine yaz&#305;lanlar g�r�nt� i�in"<br>
-        # int(input("telefon numaras&#305; gir: ")) bu &#351;ekilde yapmazsan&#305;z gelen
-        de&#287;er yaz&#305; tipinde olur<br>
-        print(type(telNo)) # bu &#351;ekilde tipine bakabilirsin<br>
-        #
--------------------------------------------------------------------------------------------------------------------------------<br></span></b>
-  </body>
-</html>
+  </pre>
+  

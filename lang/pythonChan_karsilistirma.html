@@ -1,152 +1,99 @@
 <style>
-  a{
-    text-decoration: none;
+  pre{
     color: aliceblue;
   }
-
-  h1{
-    color: aliceblue;
-  }
-
-  p{
-    color: aliceblue;
-  }
-
-  h2{
-    color: aliceblue;
-  }
-
-  ol{
-    color: aliceblue;
-    list-style: none;
-    display: block;
-    zoom: 1;
-    display: inline;
-  }
-
-
-  table{
-    border-collapse: separate;
-    border-spacing: 30px;
+  
+  /* scrool color */
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+  
+    ::-webkit-scrollbar-track {
+        background: #180133;
+      }
+      
+    ::-webkit-scrollbar-thumb {
+        background: #39017a;
+      }
+      
+    ::-webkit-scrollbar-thumb:hover {
+        background: #3e186b;
+      }
+  
+   
+  </style>
+  
+  
+  
+  <pre>
+  
+    # karşılaştırma -----------------------------------------------------------------------------------------------------------------
+    # ufak not ilk sorulan soru karşılanır ise diğerleri nin de doğru olması bir şeyi değiştirmiyor çünkü sadece ilk değer çalışıyor
     
-  }
-
-  td{
-    background-color: #39017a80;
-    border-radius: 1%;
-  }
-
-/* scrool color */
-  ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-  ::-webkit-scrollbar-track {
-      background: #180133;
-    }
+    numara1 = 10
+    numara2 = 5
     
-  ::-webkit-scrollbar-thumb {
-      background: #39017a;
-    }
+    if numara1 == numara2:
+        print("false") # eşit değil bu yüzden false
+    elif numara1 != numara2:
+        print("true")  # eşit değil bu yüzden true
     
-  ::-webkit-scrollbar-thumb:hover {
-      background: #3e186b;
-    }
-
- 
-</style>
-
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <style>
-    #notice{
-        color: azure;
-        font-size: 25px;
-    }
-    p{
-        color: aliceblue;
-        font-size: 35px;
-    }
-    </style>
-  </head>
-  <body><b><span style="color: #666666;"># kar&#351;&#305;la&#351;t&#305;rma
------------------------------------------------------------------------------------------------------------------<br>#
-        ufak not ilk sorulan soru kar&#351;&#305;lan&#305;r ise di&#287;erleri nin de do&#287;ru olmas&#305;
-        bir &#351;eyi de&#287;i&#351;tirmiyor ��nk� sadece ilk de&#287;er �al&#305;&#351;&#305;yor<br>
-        <br>
-        numara1 = 10<br>
-        numara2 = 5<br>
-        <br>
-        if numara1 == numara2:<br>
-        &nbsp;&nbsp;&nbsp; print("false") # e&#351;it de&#287;il bu y�zden false<br>
-        elif numara1 != numara2:<br>
-        &nbsp;&nbsp;&nbsp; print("true")&nbsp; # e&#351;it de&#287;il bu y�zden true<br>
-        <br>
-        numara2 += 5 # += ile de&#287;er ekleyip e&#351;itlemi&#351; olduk | += -= *= /=<br>
-        <br>
-        if numara1 == numara2:<br>
-        &nbsp;&nbsp;&nbsp; print("true") # art&#305;k e&#351;it bu y�zden true<br>
-        elif numara1 != numara2:<br>
-        &nbsp;&nbsp;&nbsp; print("false") # art&#305;k e&#351;it bu y�zden false<br>
-        <br>
-        # bu k&#305;s&#305;m numara2 += 5 bunun olmad&#305;&#287;&#305;n&#305; varsayarak yap&#305;ld&#305;<br>
-        if numara1 &gt; numara2:<br>
-        &nbsp;&nbsp;&nbsp; print("true") # numara1 numara 2 den b�y�k bu y�zden
-        true<br>
-        elif numara1 &lt; numara2:<br>
-        &nbsp;&nbsp;&nbsp; print("false") # numara1 numara 2 den b�y�k bu y�zden
-        false<br>
-        <br>
-        # str �rne&#287;i<br>
-        ismin = input("ismini gir: ") # buras&#305; biraz farkl&#305; olsun diye ekledim<br>
-        if ismin == ismin:<br>
-        &nbsp;&nbsp;&nbsp; print("evet muhtemelen bu senin ismin san&#305;r&#305;m...") #
-        girdi&#287;in isim sorulan isme e&#351;it olmu&#351; olucak yani ayn&#305;<br>
-        elif ismin == "mahmut":<br>
-        &nbsp;&nbsp;&nbsp; print("eyvah mahmut hoca")<br>
-        <br>
-        <br>
-        # uyar&#305; bu udemy de olan ders �devi ekleyim dedim buraya haz&#305;r yapm&#305;&#351;ken<br>
-        # s&#305;n&#305;f&#305; ge�me kalma durumu<br>
-        user_note = int(input("Notunu Gir: "))<br>
-        <br>
-        <br>
-        if user_note &lt; 0 or user_note &gt; 100: # kullan&#305;c&#305; notu 0 dan k���k
-        olmas&#305; yada 100 den b�y�k olmamas&#305; gerek...<br>
-        &nbsp;&nbsp;&nbsp; print("bazen sadece hayal kurars&#305;n anl&#305;yorum seni")<br>
-        elif user_note == 100:<br>
-        &nbsp;&nbsp;&nbsp; print("do&#287;ruyu s�yle k&#305;z arkada&#351;&#305;n yok de&#287;il mi? yada
-        bir hayat&#305;n")<br>
-        elif user_note == 90:<br>
-        &nbsp;&nbsp;&nbsp; print("fena de&#287;il")<br>
-        elif user_note &gt; 50:<br>
-        &nbsp;&nbsp;&nbsp; print("hmm ge�din san&#305;r&#305;m s&#305;n&#305;f&#305; h.o karde&#351; ama
-        �al&#305;&#351;man gerek")<br>
-        else:<br>
-        &nbsp;&nbsp;&nbsp; print("ge�mi&#351; olsun karde&#351;im s&#305;k&#305;nt&#305; yok fast food
-        her zaman eleman ar&#305;yor nas&#305;l olsa")<br>
-        <br>
-        <br>
-        # kullan&#305;c&#305; girdisi<br>
-        <br>
-        realusername = "mahmut"<br>
-        realuserpassword = "1234"<br>
-        <br>
-        userName = input("kullan&#305;c&#305; ad&#305;: ")<br>
-        if realusername == userName: # e&#287;er kullan&#305;c&#305; ad&#305; do&#287;ru ise <br>
-        &nbsp;&nbsp;&nbsp; userPassword = input("kullan&#305;c&#305; &#351;ifresi: ") # &#351;ifre
-        soruyoruz<br>
-        &nbsp;&nbsp;&nbsp; if realuserpassword == userPassword: <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print("ho&#351; geldin Mahmut
-        hoca")&nbsp;&nbsp; # &#351;ifre do&#287;ru ise tamamd&#305;r<br>
-        &nbsp;&nbsp;&nbsp; else:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print("&#351;ifreni unuttun
-        san&#305;r&#305;m Mahmut hoca?") # e&#287;er &#351;ifre do&#287;ru de&#287;ilse<br>
-        else:<br>
-        &nbsp;&nbsp;&nbsp; print("malesef b�yle bir kullan&#305;c&#305; mevcut de&#287;il") #
-        e&#287;er kullan&#305;c&#305; ad&#305; do&#287;ru de&#287;ilse<br>
-        #
--------------------------------------------------------------------------------------------------------------------------------<br></span></b>
-  </body>
-</html>
+    numara2 += 5 # += ile değer ekleyip eşitlemiş olduk | += -= *= /=
+    
+    if numara1 == numara2:
+        print("true") # artık eşit bu yüzden true
+    elif numara1 != numara2:
+        print("false") # artık eşit bu yüzden false
+    
+    # bu kısım numara2 += 5 bunun olmadığını varsayarak yapıldı
+    if numara1 > numara2:
+        print("true") # numara1 numara 2 den büyük bu yüzden true
+    elif numara1 < numara2:
+        print("false") # numara1 numara 2 den büyük bu yüzden false
+    
+    # str örneği
+    ismin = input("ismini gir: ") # burası biraz farklı olsun diye ekledim
+    if ismin == ismin:
+        print("evet muhtemelen bu senin ismin sanırım...") # girdiğin isim sorulan isme eşit olmuş olucak yani aynı
+    elif ismin == "mahmut":
+        print("eyvah mahmut hoca")
+    
+    
+    # uyarı bu udemy de olan ders ödevi ekleyim dedim buraya hazır yapmışken
+    # sınıfı geçme kalma durumu
+    user_note = int(input("Notunu Gir: "))
+    
+    
+    if user_note < 0 or user_note > 100: # kullanıcı notu 0 dan küçük olması yada 100 den büyük olmaması gerek...
+        print("bazen sadece hayal kurarsın anlıyorum seni")
+    elif user_note == 100:
+        print("doğruyu söyle kız arkadaşın yok değil mi? yada bir hayatın")
+    elif user_note == 90:
+        print("fena değil")
+    elif user_note > 50:
+        print("hmm geçdin sanırım sınıfı h.o kardeş ama çalışman gerek")
+    else:
+        print("geçmiş olsun kardeşim sıkıntı yok fast food her zaman eleman arıyor nasıl olsa")
+    
+    
+    # kullanıcı girdisi
+    
+    realusername = "mahmut"
+    realuserpassword = "1234"
+    
+    userName = input("kullanıcı adı: ")
+    if realusername == userName: # eğer kullanıcı adı doğru ise 
+        userPassword = input("kullanıcı şifresi: ") # şifre soruyoruz
+        if realuserpassword == userPassword: 
+            print("hoş geldin Mahmut hoca")   # şifre doğru ise tamamdır
+        else:
+            print("şifreni unuttun sanırım Mahmut hoca?") # eğer şifre doğru değilse
+    else:
+        print("malesef böyle bir kullanıcı mevcut değil") # eğer kullanıcı adı doğru değilse
+    # -------------------------------------------------------------------------------------------------------------------------------
+    
+  
+  
+    
+  </pre>
+  

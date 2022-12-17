@@ -1,106 +1,54 @@
 <style>
-  a{
-    text-decoration: none;
+  pre{
     color: aliceblue;
   }
-
-  h1{
-    color: aliceblue;
-  }
-
-  p{
-    color: aliceblue;
-  }
-
-  h2{
-    color: aliceblue;
-  }
-
-  ol{
-    color: aliceblue;
-    list-style: none;
-    display: block;
-    zoom: 1;
-    display: inline;
-  }
-
-
-  table{
-    border-collapse: separate;
-    border-spacing: 30px;
+  
+  /* scrool color */
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+  
+    ::-webkit-scrollbar-track {
+        background: #180133;
+      }
+      
+    ::-webkit-scrollbar-thumb {
+        background: #39017a;
+      }
+      
+    ::-webkit-scrollbar-thumb:hover {
+        background: #3e186b;
+      }
+  
+   
+  </style>
+  
+  
+  
+  <pre>
+  
+    # boolean -----------------------------------------------------------------------------------------------------------------------
+    # boolean --> true yada false | doğru veya yanlış
     
-  }
-
-  td{
-    background-color: #39017a80;
-    border-radius: 1%;
-  }
-
-/* scrool color */
-  ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-  ::-webkit-scrollbar-track {
-      background: #180133;
-    }
+    # | doğru mu yanlış mı - eşit mi değil mi - büyük mü küçük mü?    -  içinde var mı yok mu
+    # true false           - == yada != gibi  - < yada > | <= yada >= -    in   yada not in | 
     
-  ::-webkit-scrollbar-thumb {
-      background: #39017a;
-    }
+    # ufak bir örnek --> tabi örnekler sayfasında bolca örnek yazıcam burası bilgi kısmı
+    uwu = "gnuchan"
+    #      1234567
+    # len bize karakter uzunluğunu veriyor
+    if len(uwu) != 9:                   # eşit değildir : evet bu yüzden direk bu çalışıcak
+        print("eşit değil")
+    elif len(uwu) == 9:                 # eşittir eğer if konuşu olmaz ise elif olur else if deniyor
+        print("eşit")
+    elif len(uwu) > 9:
+        print("eşit")
+    else:                               # en son elif'ler olmaz ise bu devreye girer
+        print("hiç biri değil")
+    # -------------------------------------------------------------------------------------------------------------------------------
     
-  ::-webkit-scrollbar-thumb:hover {
-      background: #3e186b;
-    }
-
- 
-</style>
-
-
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <style>
-    #notice{
-        color: azure;
-        font-size: 25px;
-    }
-    p{
-        color: aliceblue;
-        font-size: 35px;
-    }
-    </style>
-  </head>
-  <body><b><span style="color: #666666;"># boolean
------------------------------------------------------------------------------------------------------------------------<br>#
-        boolean --&gt; true yada false | do&#287;ru veya yanl&#305;&#351;<br>
-        <br>
-        # | do&#287;ru mu yanl&#305;&#351; m&#305; - e&#351;it mi de&#287;il mi - b�y�k m� k���k
-        m�?&nbsp;&nbsp;&nbsp; -&nbsp; i�inde var m&#305; yok mu<br>
-        # true false&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        - == yada != gibi&nbsp; - &lt; yada &gt; | &lt;= yada &gt;=
-        -&nbsp;&nbsp;&nbsp; in&nbsp;&nbsp; yada not in | <br>
-        <br>
-        # ufak bir �rnek --&gt; tabi �rnekler sayfas&#305;nda bolca �rnek yaz&#305;cam
-        buras&#305; bilgi k&#305;sm&#305;<br>
-        uwu = "gnuchan"<br>
-        #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1234567<br>
-        # len bize karakter uzunlu&#287;unu veriyor<br>
-        if len(uwu) !=
-        9:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        # e&#351;it de&#287;ildir : evet bu y�zden direk bu �al&#305;&#351;&#305;cak<br>
-        &nbsp;&nbsp;&nbsp; print("e&#351;it de&#287;il")<br>
-        elif len(uwu) ==
-        9:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        # e&#351;ittir e&#287;er if konu&#351;u olmaz ise elif olur else if deniyor<br>
-        &nbsp;&nbsp;&nbsp; print("e&#351;it")<br>
-        elif len(uwu) &gt; 9:<br>
-        &nbsp;&nbsp;&nbsp; print("e&#351;it")<br>
-        else:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        # en son elif'ler olmaz ise bu devreye girer<br>
-        &nbsp;&nbsp;&nbsp; print("hi� biri de&#287;il")<br>
-        #
--------------------------------------------------------------------------------------------------------------------------------<br><br>
-      </span></b>
-  </body>
-</html>
+  
+  
+    
+  </pre>
+  

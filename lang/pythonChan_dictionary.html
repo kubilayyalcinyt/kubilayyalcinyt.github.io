@@ -1,122 +1,75 @@
 <style>
-  a{
-    text-decoration: none;
+  pre{
     color: aliceblue;
   }
+  
+  /* scrool color */
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+  
+    ::-webkit-scrollbar-track {
+        background: #180133;
+      }
+      
+    ::-webkit-scrollbar-thumb {
+        background: #39017a;
+      }
+      
+    ::-webkit-scrollbar-thumb:hover {
+        background: #3e186b;
+      }
+  
+   
+  </style>
+  
+  
+  
+  <pre>
+  
+    # dictionary (sözlük) -----------------------------------------------------------------------------------------------------------
 
-  h1{
-    color: aliceblue;
-  }
-
-  p{
-    color: aliceblue;
-  }
-
-  h2{
-    color: aliceblue;
-  }
-
-  ol{
-    color: aliceblue;
-    list-style: none;
-    display: block;
-    zoom: 1;
-    display: inline;
-  }
-
-
-  table{
-    border-collapse: separate;
-    border-spacing: 30px;
+    oyunPuanları = {
+        "half life 3":100,
+        "left 4 dead 3":95,
+        "portal 3":98,
+        "gta 6":98.5,
     
-  }
-
-  td{
-    background-color: #39017a80;
-    border-radius: 1%;
-  }
-
-/* scrool color */
-  ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-  ::-webkit-scrollbar-track {
-      background: #180133;
-    }
     
-  ::-webkit-scrollbar-thumb {
-      background: #39017a;
+        "alt oyunlar":{
+            "postal 32":62,
+            "metin 3":32,
+            "var kıraft 3":"yüz puan"
+    
+        }
     }
     
-  ::-webkit-scrollbar-thumb:hover {
-      background: #3e186b;
-    }
-
- 
-</style>
-
-
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <style>
-    #notice{
-        color: azure;
-        font-size: 25px;
-    }
-    p{
-        color: aliceblue;
-        font-size: 35px;
-    }
-    </style>
-  </head>
-  <body><b><span style="color: #666666;"># dictionary (s�zl�k)
------------------------------------------------------------------------------------------------------------<br><br>
-        oyunPuanlar&#305; = {<br>
-        &nbsp;&nbsp;&nbsp; "half life 3":100,<br>
-        &nbsp;&nbsp;&nbsp; "left 4 dead 3":95,<br>
-        &nbsp;&nbsp;&nbsp; "portal 3":98,<br>
-        &nbsp;&nbsp;&nbsp; "gta 6":98.5,<br>
-        <br>
-        <br>
-        &nbsp;&nbsp;&nbsp; "alt oyunlar":{<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "postal 32":62,<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "metin 3":32,<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "var k&#305;raft 3":"y�z puan"<br>
-        <br>
-        &nbsp;&nbsp;&nbsp; }<br>
-        }<br>
-        <br>
-        # s�zl�kde anahtar ve de&#287;er bulunur anahtar �a&#287;r&#305;l&#305;r de&#287;er al&#305;n&#305;r | ufak
-        not anahtar de&#287;erleri int oldu&#287;u i�in str �evirdim<br>
-        print("Y&#305;l&#305;n En iyi Oyunu: " + str(oyunPuanlar&#305;["half life 3"])) # bu
-        &#351;ekilde �a&#287;&#305;r&#305;r&#305;z yada<br>
-        #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        anahtar<br>
-        print("Y&#305;l&#305;n En ��p Oyunu: " + str(oyunPuanlar&#305;["alt oyunlar"]["metin
-        3"])) # alt anahtar&#305; �a&#287;&#305;rd&#305;m b�yle<br>
-        #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        anahtar&nbsp;&nbsp;&nbsp;&nbsp; alt anahtar<br>
-        <br>
-        oyunPuanlar&#305;["dead island"] = 1000 # yeni de&#287;er eklemek<br>
-        print(oyunPuanlar&#305;["dead island"])<br>
-        <br>
-        oyunPuanlar&#305;["alt oyunlar"]["metin 3"] = 100 # b�yle anahtar&#305;n de&#287;erini
-        de&#287;i&#351;tirebilirsiniz<br>
-        print(oyunPuanlar&#305;["alt oyunlar"]["metin 3"]) <br>
-        <br>
-        oyunPuanlar&#305;.pop("half life 3") # anahtar silmek i�in<br>
-        print(oyunPuanlar&#305;)<br>
-        <br>
-        oyunPuanlar&#305;.popitem() # rasgele anahtar silmek i�in<br>
-        <br>
-        yedek = oyunPuanlar&#305;.copy() # var olan s�zl�&#287;� yeni bir s�zl�k
-        olu&#351;turmak yada olan&#305;n i�ine kopyalamak i�in<br>
-        print(yedek)<br>
-        <br>
-        oyunPuanlar&#305;.clear() # tamamen silmek i�in<br>
-        #
--------------------------------------------------------------------------------------------------------------------------------<br></span></b>
-  </body>
-</html>
+    # sözlükde anahtar ve değer bulunur anahtar çağrılır değer alınır | ufak not anahtar değerleri int olduğu için str çevirdim
+    print("Yılın En iyi Oyunu: " + str(oyunPuanları["half life 3"])) # bu şekilde çağırırız yada
+    #                                                  anahtar
+    print("Yılın En çöp Oyunu: " + str(oyunPuanları["alt oyunlar"]["metin 3"])) # alt anahtarı çağırdım böyle
+    #                                                  anahtar     alt anahtar
+    
+    oyunPuanları["dead island"] = 1000 # yeni değer eklemek
+    print(oyunPuanları["dead island"])
+    
+    oyunPuanları["alt oyunlar"]["metin 3"] = 100 # böyle anahtarın değerini değiştirebilirsiniz
+    print(oyunPuanları["alt oyunlar"]["metin 3"]) 
+    
+    oyunPuanları.pop("half life 3") # anahtar silmek için
+    print(oyunPuanları)
+    
+    oyunPuanları.popitem() # rasgele anahtar silmek için
+    
+    yedek = oyunPuanları.copy() # var olan sözlüğü yeni bir sözlük oluşturmak yada olanın içine kopyalamak için
+    print(yedek)
+    
+    oyunPuanları.clear() # tamamen silmek için
+    # -------------------------------------------------------------------------------------------------------------------------------
+    
+    
+  
+  
+    
+  </pre>
+  
