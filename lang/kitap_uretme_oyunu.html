@@ -1,0 +1,186 @@
+<style>
+    pre{
+      color: aliceblue;
+    }
+    
+    /* scrool color */
+      ::-webkit-scrollbar {
+          width: 10px;
+        }
+    
+      ::-webkit-scrollbar-track {
+          background: #180133;
+        }
+        
+      ::-webkit-scrollbar-thumb {
+          background: #39017a;
+        }
+        
+      ::-webkit-scrollbar-thumb:hover {
+          background: #3e186b;
+        }
+    
+     
+    </style>
+
+
+
+<pre>
+    #-----------------------------------------------------------------------------------
+    # kitap üretme para kazanma 
+    # tutorial.py
+    from tqdm import tqdm
+    import time
+    
+    
+    class matbaa():
+    
+        def __init__(self, murekkeb, islem, kitaplar, para, calismaBitti):
+            self.murekkeb = murekkeb
+            self.islem = islem
+            self.kitaplar = kitaplar = []
+            self.para = para
+            self.calismaBitti = False
+            
+        
+        def bilgiler(self):
+            print(f"""
+            |----------------------------------------|
+            |Mürekkeb Miktarı: {self.murekkeb}       |
+            |kitaplar: {len(self.kitaplar)}          |
+            |----------------------------------------|
+            |                                        |
+            |                                        |
+            |         --------komutlar--------       |
+            |   1:) mürekkebi doldur                 |
+            |   2:) mürekkeb yardım                  |
+            |   3:) hesap                            |
+            |   4:) kitaplar                         |
+            |   5:) kalan iş                         |
+            ------------------------------------------
+            """)
+    
+    
+        def calis(self):
+            if self.islem == 5:
+                print("çalışılıcak bir şey kalmadı")
+            else:
+                if self.murekkeb <= 0:
+                    print("mürekkep kalmadı")
+                else:
+                    for isZamani in tqdm(range(2), total=2, position=0, leave=False, ascii=True, desc="çalışılıyor şuanda: "):
+                        time.sleep(1)
+                    self.islem += 1
+                    self.murekkeb -= 1
+                    print(str(self.islem) + "kalan iş")
+                    self.calismaBitti = True
+                    
+    
+        def kitabıBastır(self):
+            if self.calismaBitti == True:
+                    print("işlem bitti kitabın tamamlanması için isim gir \n")
+    
+                    kitap = input("Kitap Adını Gir: ")
+                    self.kitaplar.append(kitap)
+                    print("Kitabınızın adı: ", self.kitaplar)
+                        
+                    self.islem = 0
+                    self.para += 150
+    
+                    print("Kitap tamlandı Şu kadar Kazandın: " + str(self.para))
+                    self.calismaBitti = False
+        
+    
+        def murekkebDoldur(self):
+            if self.para == 0:
+                print("paran yok")
+            elif self.para < 100:
+                print("yeterli değil")
+            else:
+                self.murekkeb = 5
+                self.para -= 100
+    
+    # main.py
+    
+    """
+    
+    1 yardım komutları bitti
+    kitap 20 çalışmadan sonra bitiyor
+    """
+    
+    from tutorial import *
+    
+    
+    
+    
+    def main():
+    
+        game = matbaa(murekkeb=5, para=0, kitaplar=[], islem=0, calismaBitti=False)
+    
+        islem = ""
+        timer = 20
+        info = False
+    
+        while True:
+            
+            print(f"\n\nMürekkeb: {game.murekkeb} Para: {game.para} | Kitap Sayısı: {len(game.kitaplar)} \n\n")
+            
+            if info == False:
+                print("Bilgi Almak için yardım yaz")
+                info = True
+    
+            islem = input("Ne yapıcaksın!: ")
+            print(islem)
+            
+            if "exit" == islem:
+                print("emin misin kayıt işlemi yok şuanda")
+                islem = input("Ne yapıcaksın!: ")
+                if islem == "evet":
+                    break
+                elif "hayır" == islem:
+                    print("peki")
+                    time.sleep(2)
+    
+    
+    
+    
+            # yardım kısmı
+            elif "yardım" == islem:
+                game.bilgiler()
+                time.sleep(5)
+            elif "mürekkeb yardım" == islem:
+                print("----------------------------------------------------")
+                print("mürekkebi doldurmak için para ile satın alman gerek akıllıca doldur")
+            elif "kitap listesi" == islem:
+                print("----------------------------------------------------")
+                print("kitap listesine bakarak kitaplarına bakabilirsin")
+            elif "kalan iş" == islem:
+                print("----------------------------------------------------")
+                print(f"yeni kitap için çalışma: {game.islem}")
+            elif "kitaplar" == islem:
+                print("\n----------------------------------------------------")
+                if len(game.kitaplar) <= 0:
+                    print("Daha kitap basımı yapmadın")
+                else:    
+                    for i in game.kitaplar:
+                        print(": " + i)
+            # yardım kısmı
+    
+    
+            # kitap çalışması
+            elif "çalışmaya başla" == islem or "çalış" in islem:
+                game.calis()
+                
+            #kitap basıtmra
+            elif "kitabı bastır" == islem:
+                game.kitabıBastır()
+    
+            # mürekkeb doldurma
+            elif "mürekkebi doldur" == islem:
+                game.murekkebDoldur()
+    
+        
+    
+    if __name__=="__main__":
+        main()
+</pre>

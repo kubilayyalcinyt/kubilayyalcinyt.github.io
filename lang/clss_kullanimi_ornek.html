@@ -1,341 +1,140 @@
 <style>
-    a{
-      text-decoration: none;
+    pre{
       color: aliceblue;
     }
-  
-    h1{
-      color: aliceblue;
-    }
-  
-    p{
-      color: aliceblue;
-    }
-  
-    h2{
-      color: aliceblue;
-    }
-  
-    ol{
-      color: aliceblue;
-      list-style: none;
-      display: block;
-      zoom: 1;
-      display: inline;
-    }
-  
-  
-    table{
-      border-collapse: separate;
-      border-spacing: 30px;
-      
-    }
-  
-    td{
-      background-color: #39017a80;
-      border-radius: 1%;
-    }
-  
-  /* scrool color */
-    ::-webkit-scrollbar {
-        width: 10px;
-      }
-  
-    ::-webkit-scrollbar-track {
-        background: #180133;
-      }
-      
-    ::-webkit-scrollbar-thumb {
-        background: #39017a;
-      }
-      
-    ::-webkit-scrollbar-thumb:hover {
-        background: #3e186b;
-      }
-      #notice{
-        color: azure;
-        font-size: 25px;
-    }
-    p{
-        color: aliceblue;
-        font-size: 35px;
-    }
-   
-  </style>
-  
+    
+    /* scrool color */
+      ::-webkit-scrollbar {
+          width: 10px;
+        }
+    
+      ::-webkit-scrollbar-track {
+          background: #180133;
+        }
+        
+      ::-webkit-scrollbar-thumb {
+          background: #39017a;
+        }
+        
+      ::-webkit-scrollbar-thumb:hover {
+          background: #3e186b;
+        }
+    
+     
+    </style>
 
-    <p id="notice">
-        <pre>
-            # class örneği ekstra
+<pre>
 
+    # main.py
+    from tutorial import * # * içerideki herşeyi importlar ama
+    #tutorial.py den bu şekilde import edersek
+    # tutorial.blackMesa() yazmamız gerekmez her seferinde
+    
+    
+    # aşşağıda gördüğünüz gibi paranrez içindeki değerleri böyle değiştirip yeni karakter oluşturduk
+    freeman = blackMesa(
+        adam="Gordon Freeman",
+        isyeri="black mesa",
+        yetenekler=["bilim yapıyor"],
+        tkazanc=1600,
+        kazanc=1200
+    )
+    
+    
+    freeman.calısma() # çalıştı ve kazanç değeri değişti
+    freeman.bilgiler() # bütün bilgileri print ile çıktı aldık
+    
+    
+    # isme göre yeni karakter oluşturuyoruz
+    yonetici = blackMesa(
+        adam="",
+        isyeri="",
+        yetenekler=[],
+        kazanc=0,
+        tkazanc=0
+    )
+    
+    # yeni class ile aynı önceki değer yapısını kullandık
+    ali = blackMesaBufe(
+        adam="Büfeci ali",
+        isyeri="black mesa büfesi",
+        yetenekler=["Atom Tost yapar"],
+        kazanc=80,
+        tkazanc=16000,
+        yoneticiGucu=30
+    )
+    
+    ali.calısma() # aynı özellikler geçerlidir
+    ali.bilgiler()
+    
+    
+    #tutorial.py
+    # class örneği ve self kullanımı
+    # ben bunu sanki kendi kütüphanemi yapıyormuşum gibi kodladım
+    
+    class blackMesa():
+        
+        def __init__(self, adam, isyeri, yetenekler, kazanc, tkazanc): #buraya self ile hazırladığımız değişkenleri
+            self.adam = adam           # burada self. ile tanımlıyoruz aşşağıda örnekler gibi çekip kullanıyoruz
+            self.isYeri = isyeri
+            self.yetenekler = yetenekler
+            self.kazanc = kazanc
+            self.tkazanc = tkazanc
+    
+        def calısma(self):
+            self.kazanc += 100
+            print(f"{self.adam} çalıştı ve şu kadar kazandı {self.kazanc}")
+    
+        def terfi(self):
+            self.tkazanc += 200
+            print(f"{self.adam} terfi Aldı şuandaki maşşı: " + str(self.tkazanc))
+        
+        def bilgiler(self):
+            print(
+                "-"*10 + "\n”"
+                "Adı:" + self.adam + "\n"
+                + "is Yeri" + self.isYeri + "\n"
+                + "Yetenekler: " + str(self.yetenekler) + "\n"
+                + "Toplam Maaş: " + str(self.tkazanc) + "\n"
+                + "Kazancı: " + str(self.kazanc)
+                + "\n" + "-"*10
+            )
+    
+    # ikinci class örneği ve ekstraları öncekini al ve yenilerini ekle
+    
+    class blackMesaBufe(blackMesa): #blackmesa classından bilgileri alıyoruz 
+        def __init__(self, adam, isyeri, yetenekler, kazanc, tkazanc, yoneticiGucu):
+            super().__init__(adam, isyeri, yetenekler, kazanc, tkazanc)
+            # super(). ile aynı değerleri almaz ise önceki class için değerler
+            # silinoyor ve burada self eklememize gerek yok
+    
+            self.yonetG = yoneticiGucu
+            self.adam = adam
+            self.isYeri = isyeri
+            self.yetenekler = yetenekler
+            self.kazanc = kazanc
+            self.tkazanc = tkazanc
+    
+        def calısma(self):
+            print(f"{self.adam} çalıştı ve şu kadar kazandı {self.kazanc}")
+            self.kazanc += 100
+            if self.yonetG == 40:
+                self.yonetG += 0.5
+    
+        def bilgiler(self):
+            super().bilgiler() # aynı mantık super(). ile bilgileri aldık
+            print("Yonetici Gücü: " + str(self.yonetG))
+            if self.yonetG == 100: # ekstra sorgu ekledik
+                print("not: yönetici için doğmuş biri")
+            elif self.yonetG == 70:
+                print("not: belki bir gün yönetici olabilir")
+            else:
+                print("not: bu adam yönetici ise ben amerika nın başkanıyım")
+    
+    #------------------------------------------------------------------------------------
+    
+    
+    
+    
 
-            # main.py
-            from tutorial import * # * içerideki herşeyi importlar ama
-            #tutorial.py den bu şekilde import edersek
-            # tutorial.blackMesa() yazmamız gerekmez her seferinde
-            
-            
-            # aşşağıda gördüğünüz gibi paranrez içindeki değerleri böyle değiştirip yeni karakter oluşturduk
-            freeman = blackMesa(
-                adam="Gordon Freeman",
-                isyeri="black mesa",
-                yetenekler=["bilim yapıyor"],
-                tkazanc=1600,
-                kazanc=1200
-            )
-            
-            
-            freeman.calısma() # çalıştı ve kazanç değeri değişti
-            freeman.bilgiler() # bütün bilgileri print ile çıktı aldık
-            
-            
-            # isme göre yeni karakter oluşturuyoruz
-            yonetici = blackMesa(
-                adam="",
-                isyeri="",
-                yetenekler=[],
-                kazanc=0,
-                tkazanc=0
-            )
-            
-            # yeni class ile aynı önceki değer yapısını kullandık
-            ali = blackMesaBufe(
-                adam="Büfeci ali",
-                isyeri="black mesa büfesi",
-                yetenekler=["Atom Tost yapar"],
-                kazanc=80,
-                tkazanc=16000,
-                yoneticiGucu=30
-            )
-            
-            ali.calısma() # aynı özellikler geçerlidir
-            ali.bilgiler()
-            
-            
-            #tutorial.py
-            # class örneği ve self kullanımı
-            # ben bunu sanki kendi kütüphanemi yapıyormuşum gibi kodladım
-            
-            class blackMesa():
-                
-                def __init__(self, adam, isyeri, yetenekler, kazanc, tkazanc): #buraya self ile hazırladığımız değişkenleri
-                    self.adam = adam           # burada self. ile tanımlıyoruz aşşağıda örnekler gibi çekip kullanıyoruz
-                    self.isYeri = isyeri
-                    self.yetenekler = yetenekler
-                    self.kazanc = kazanc
-                    self.tkazanc = tkazanc
-            
-                def calısma(self):
-                    self.kazanc += 100
-                    print(f"{self.adam} çalıştı ve şu kadar kazandı {self.kazanc}")
-            
-                def terfi(self):
-                    self.tkazanc += 200
-                    print(f"{self.adam} terfi Aldı şuandaki maşşı: " + str(self.tkazanc))
-                
-                def bilgiler(self):
-                    print(
-                        "-"*10 + "\n”"
-                        "Adı:" + self.adam + "\n"
-                        + "is Yeri" + self.isYeri + "\n"
-                        + "Yetenekler: " + str(self.yetenekler) + "\n"
-                        + "Toplam Maaş: " + str(self.tkazanc) + "\n"
-                        + "Kazancı: " + str(self.kazanc)
-                        + "\n" + "-"*10
-                    )
-            
-            # ikinci class örneği ve ekstraları öncekini al ve yenilerini ekle
-            
-            class blackMesaBufe(blackMesa): #blackmesa classından bilgileri alıyoruz 
-                def __init__(self, adam, isyeri, yetenekler, kazanc, tkazanc, yoneticiGucu):
-                    super().__init__(adam, isyeri, yetenekler, kazanc, tkazanc)
-                    # super(). ile aynı değerleri almaz ise önceki class için değerler
-                    # silinoyor ve burada self eklememize gerek yok
-            
-                    self.yonetG = yoneticiGucu
-                    self.adam = adam
-                    self.isYeri = isyeri
-                    self.yetenekler = yetenekler
-                    self.kazanc = kazanc
-                    self.tkazanc = tkazanc
-            
-                def calısma(self):
-                    print(f"{self.adam} çalıştı ve şu kadar kazandı {self.kazanc}")
-                    self.kazanc += 100
-                    if self.yonetG == 40:
-                        self.yonetG += 0.5
-            
-                def bilgiler(self):
-                    super().bilgiler() # aynı mantık super(). ile bilgileri aldık
-                    print("Yonetici Gücü: " + str(self.yonetG))
-                    if self.yonetG == 100: # ekstra sorgu ekledik
-                        print("not: yönetici için doğmuş biri")
-                    elif self.yonetG == 70:
-                        print("not: belki bir gün yönetici olabilir")
-                    else:
-                        print("not: bu adam yönetici ise ben amerika nın başkanıyım")
-            
-            #------------------------------------------------------------------------------------
-            
-            
-            
-            
-            #-----------------------------------------------------------------------------------
-            # kitap üretme para kazanma 
-            # tutorial.py
-            from tqdm import tqdm
-            import time
-            
-            
-            class matbaa():
-            
-                def __init__(self, murekkeb, islem, kitaplar, para, calismaBitti):
-                    self.murekkeb = murekkeb
-                    self.islem = islem
-                    self.kitaplar = kitaplar = []
-                    self.para = para
-                    self.calismaBitti = False
-                    
-                
-                def bilgiler(self):
-                    print(f"""
-                    |----------------------------------------|
-                    |Mürekkeb Miktarı: {self.murekkeb}       |
-                    |kitaplar: {len(self.kitaplar)}          |
-                    |----------------------------------------|
-                    |                                        |
-                    |                                        |
-                    |         --------komutlar--------       |
-                    |   1:) mürekkebi doldur                 |
-                    |   2:) mürekkeb yardım                  |
-                    |   3:) hesap                            |
-                    |   4:) kitaplar                         |
-                    |   5:) kalan iş                         |
-                    ------------------------------------------
-                    """)
-            
-            
-                def calis(self):
-                    if self.islem == 5:
-                        print("çalışılıcak bir şey kalmadı")
-                    else:
-                        if self.murekkeb <= 0:
-                            print("mürekkep kalmadı")
-                        else:
-                            for isZamani in tqdm(range(2), total=2, position=0, leave=False, ascii=True, desc="çalışılıyor şuanda: "):
-                                time.sleep(1)
-                            self.islem += 1
-                            self.murekkeb -= 1
-                            print(str(self.islem) + "kalan iş")
-                            self.calismaBitti = True
-                            
-            
-                def kitabıBastır(self):
-                    if self.calismaBitti == True:
-                            print("işlem bitti kitabın tamamlanması için isim gir \n")
-            
-                            kitap = input("Kitap Adını Gir: ")
-                            self.kitaplar.append(kitap)
-                            print("Kitabınızın adı: ", self.kitaplar)
-                                
-                            self.islem = 0
-                            self.para += 150
-            
-                            print("Kitap tamlandı Şu kadar Kazandın: " + str(self.para))
-                            self.calismaBitti = False
-                
-            
-                def murekkebDoldur(self):
-                    if self.para == 0:
-                        print("paran yok")
-                    elif self.para < 100:
-                        print("yeterli değil")
-                    else:
-                        self.murekkeb = 5
-                        self.para -= 100
-            
-            # main.py
-            
-            """
-            
-            1 yardım komutları bitti
-            kitap 20 çalışmadan sonra bitiyor
-            """
-            
-            from tutorial import *
-            
-            
-            
-            
-            def main():
-            
-                game = matbaa(murekkeb=5, para=0, kitaplar=[], islem=0, calismaBitti=False)
-            
-                islem = ""
-                timer = 20
-                info = False
-            
-                while True:
-                    
-                    print(f"\n\nMürekkeb: {game.murekkeb} Para: {game.para} | Kitap Sayısı: {len(game.kitaplar)} \n\n")
-                    
-                    if info == False:
-                        print("Bilgi Almak için yardım yaz")
-                        info = True
-            
-                    islem = input("Ne yapıcaksın!: ")
-                    print(islem)
-                    
-                    if "exit" == islem:
-                        print("emin misin kayıt işlemi yok şuanda")
-                        islem = input("Ne yapıcaksın!: ")
-                        if islem == "evet":
-                            break
-                        elif "hayır" == islem:
-                            print("peki")
-                            time.sleep(2)
-            
-            
-            
-            
-                    # yardım kısmı
-                    elif "yardım" == islem:
-                        game.bilgiler()
-                        time.sleep(5)
-                    elif "mürekkeb yardım" == islem:
-                        print("----------------------------------------------------")
-                        print("mürekkebi doldurmak için para ile satın alman gerek akıllıca doldur")
-                    elif "kitap listesi" == islem:
-                        print("----------------------------------------------------")
-                        print("kitap listesine bakarak kitaplarına bakabilirsin")
-                    elif "kalan iş" == islem:
-                        print("----------------------------------------------------")
-                        print(f"yeni kitap için çalışma: {game.islem}")
-                    elif "kitaplar" == islem:
-                        print("\n----------------------------------------------------")
-                        if len(game.kitaplar) <= 0:
-                            print("Daha kitap basımı yapmadın")
-                        else:    
-                            for i in game.kitaplar:
-                                print(": " + i)
-                    # yardım kısmı
-            
-            
-                    # kitap çalışması
-                    elif "çalışmaya başla" == islem or "çalış" in islem:
-                        game.calis()
-                        
-                    #kitap basıtmra
-                    elif "kitabı bastır" == islem:
-                        game.kitabıBastır()
-            
-                    # mürekkeb doldurma
-                    elif "mürekkebi doldur" == islem:
-                        game.murekkebDoldur()
-            
-                
-            
-            if __name__=="__main__":
-                main()
-        </pre>
-    </p>
+</pre>

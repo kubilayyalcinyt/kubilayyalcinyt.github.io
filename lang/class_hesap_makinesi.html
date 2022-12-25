@@ -1,0 +1,80 @@
+<style>
+    pre{
+      color: aliceblue;
+    }
+    
+    /* scrool color */
+      ::-webkit-scrollbar {
+          width: 10px;
+        }
+    
+      ::-webkit-scrollbar-track {
+          background: #180133;
+        }
+        
+      ::-webkit-scrollbar-thumb {
+          background: #39017a;
+        }
+        
+      ::-webkit-scrollbar-thumb:hover {
+          background: #3e186b;
+        }
+    
+     
+    </style>
+
+
+<pre>
+
+    bu sefer class tek bir py dosyasında tutuluyor
+
+    
+    class Calculator(object):
+
+    def __init__(self, numb1, numb2):
+        # number1 + number2 <---- bunun gibi olucak 
+        # + ilse örnek - * / mevcut
+
+        self.number1 = numb1
+        self.number2 = numb2
+
+    # matematik işlemleri
+    def add(self):
+        return self.number1 + self.number2
+    def multiply(self):
+        return self.number1 * self.number2
+    def minus(self):
+        return self.number1 - self.number2
+    def divided(self):
+        return self.number1 / self.number2
+
+# matemak işlemi seçme
+print("1 add | 2 multiply | 3 minus | 4 divided")
+math = input("Choose Math: ")
+
+# input bize yazı tipi veriyor o yüzden bizde int olarak alıyoruz
+number1 = int(input("Number1: "))
+number2 = int(input("Number2: "))
+
+# number1 ile number2 class olarak atadık
+math_xtreme = Calculator(number1, number2)
+# math_xtreme.number1 <---- örnek number1
+
+
+# seçilen işleme göre ise matematik işlemi tamamlanıyor
+if math == "1":
+    add = math_xtreme.add() # return ile add içine çıkan sonucu atamış olduk
+    print(f"{math_xtreme.number1} + {math_xtreme.number2} = {add}")
+if math == "2":
+    multiply = math_xtreme.multiply()
+    print(f"{math_xtreme.number1} * {math_xtreme.number2} = {multiply}")
+if math == "3":
+    minus = math_xtreme.minus()
+    print(f"{math_xtreme.number1} - {math_xtreme.number2} = {minus}")
+if math == "4":
+    divided = math_xtreme.divided()
+    print(f"{math_xtreme.number1} / {math_xtreme.number2} = {divided}")
+
+
+
+</pre>
